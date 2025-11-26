@@ -1,0 +1,583 @@
+{
+  "categoria": "Países y Ciudades",
+  "palabras": [
+    {
+      "palabra": "París",
+      "pistas": [
+        "Francia",
+        "Torre",
+        "Eiffel",
+        "Romántico",
+        "Capital",
+        "Arte",
+        "Louvre",
+        "Sena",
+        "Croissant",
+        "Moda",
+        "Luces",
+        "Europa"
+      ]
+    },
+    {
+      "palabra": "Japón",
+      "pistas": [
+        "Asia",
+        "Tokio",
+        "Sushi",
+        "Samurai",
+        "Anime",
+        "Tecnología",
+        "Monte Fuji",
+        "Sakura",
+        "Geisha",
+        "Kimono",
+        "Té",
+        "Isla"
+      ]
+    },
+    {
+      "palabra": "Egipto",
+      "pistas": [
+        "Pirámides",
+        "Faraón",
+        "Nilo",
+        "Desierto",
+        "Momias",
+        "Esfinge",
+        "Cairo",
+        "África",
+        "Antiguo",
+        "Arena",
+        "Jeroglíficos",
+        "Cleopatra"
+      ]
+    },
+    {
+      "palabra": "Brasil",
+      "pistas": [
+        "Carnaval",
+        "Samba",
+        "Fútbol",
+        "Río",
+        "Playa",
+        "Cristo",
+        "Amazonia",
+        "Tropical",
+        "Verde",
+        "Amarillo",
+        "Copacabana",
+        "Sudamérica"
+      ]
+    },
+    {
+      "palabra": "Nueva York",
+      "pistas": [
+        "Manhattan",
+        "Estatua",
+        "Libertad",
+        "Broadway",
+        "Rascacielos",
+        "Central Park",
+        "Times Square",
+        "Empire State",
+        "Wall Street",
+        "Brooklyn",
+        "Taxi",
+        "Manzana"
+      ]
+    },
+    {
+      "palabra": "Australia",
+      "pistas": [
+        "Canguro",
+        "Sídney",
+        "Ópera",
+        "Oceanía",
+        "Koala",
+        "Desierto",
+        "Playa",
+        "Grande",
+        "Barrera",
+        "Coral",
+        "Surfing",
+        "Boomerang"
+      ]
+    },
+    {
+      "palabra": "Italia",
+      "pistas": [
+        "Roma",
+        "Pizza",
+        "Pasta",
+        "Coliseo",
+        "Venecia",
+        "Torre",
+        "Pisa",
+        "Vaticano",
+        "Góndola",
+        "Vino",
+        "Arte",
+        "Bota"
+      ]
+    },
+    {
+      "palabra": "México",
+      "pistas": [
+        "Tacos",
+        "Mariachi",
+        "Azteca",
+        "Maya",
+        "Tequila",
+        "Sombrero",
+        "Playa",
+        "Pirámides",
+        "Cancún",
+        "Guacamole",
+        "Fiesta",
+        "Norteamérica"
+      ]
+    },
+    {
+      "palabra": "Londres",
+      "pistas": [
+        "Inglaterra",
+        "Big Ben",
+        "Reina",
+        "Té",
+        "Lluvia",
+        "Autobús",
+        "Rojo",
+        "Támesis",
+        "Torre",
+        "Palacio",
+        "Buckingham",
+        "Europa"
+      ]
+    },
+    {
+      "palabra": "Grecia",
+      "pistas": [
+        "Atenas",
+        "Acrópolis",
+        "Partenón",
+        "Dioses",
+        "Mitología",
+        "Olímpicos",
+        "Islas",
+        "Azul",
+        "Blanco",
+        "Filosofía",
+        "Democracia",
+        "Mediterráneo"
+      ]
+    },
+    {
+      "palabra": "China",
+      "pistas": [
+        "Muralla",
+        "Grande",
+        "Beijing",
+        "Dragón",
+        "Arroz",
+        "Asia",
+        "Panda",
+        "Mandarín",
+        "Terracota",
+        "Kung Fu",
+        "Té",
+        "Rojo"
+      ]
+    },
+    {
+      "palabra": "Canadá",
+      "pistas": [
+        "Maple",
+        "Hoja",
+        "Frío",
+        "Hockey",
+        "Toronto",
+        "Bilingüe",
+        "Niágara",
+        "Oso",
+        "Norte",
+        "América",
+        "Jarabe",
+        "Montreal"
+      ]
+    },
+    {
+      "palabra": "Rusia",
+      "pistas": [
+        "Moscú",
+        "Vodka",
+        "Frío",
+        "Kremlin",
+        "Plaza Roja",
+        "Siberia",
+        "Matrioshka",
+        "Ballet",
+        "Zar",
+        "Oso",
+        "Grande",
+        "Europa"
+      ]
+    },
+    {
+      "palabra": "India",
+      "pistas": [
+        "Taj Mahal",
+        "Curry",
+        "Bollywood",
+        "Elefante",
+        "Yoga",
+        "Gandhi",
+        "Sari",
+        "Especias",
+        "Delhi",
+        "Bombay",
+        "Vaca",
+        "Sagrada"
+      ]
+    },
+    {
+      "palabra": "Perú",
+      "pistas": [
+        "Machu Picchu",
+        "Inca",
+        "Lima",
+        "Ceviche",
+        "Alpaca",
+        "Cuzco",
+        "Andes",
+        "Pisco",
+        "Nazca",
+        "Llama",
+        "Sudamérica",
+        "Ruinas"
+      ]
+    },
+    {
+      "palabra": "Alemania",
+      "pistas": [
+        "Berlín",
+        "Cerveza",
+        "Oktoberfest",
+        "Muro",
+        "Salchicha",
+        "Automóviles",
+        "Castillos",
+        "Baviera",
+        "Europa",
+        "Pretzel",
+        "Frankfurt",
+        "Munich"
+      ]
+    },
+    {
+      "palabra": "Argentina",
+      "pistas": [
+        "Tango",
+        "Buenos Aires",
+        "Fútbol",
+        "Messi",
+        "Asado",
+        "Patagonia",
+        "Mate",
+        "Gaucho",
+        "Sudamérica",
+        "Carne",
+        "Pampas",
+        "Evita"
+      ]
+    },
+    {
+      "palabra": "Tailandia",
+      "pistas": [
+        "Bangkok",
+        "Templos",
+        "Elefantes",
+        "Picante",
+        "Playas",
+        "Budismo",
+        "Asia",
+        "Tropical",
+        "Masajes",
+        "Pad Thai",
+        "Isla",
+        "Mochileros"
+      ]
+    },
+    {
+      "palabra": "Egipto",
+      "pistas": [
+        "Pirámides",
+        "Faraón",
+        "Nilo",
+        "Desierto",
+        "Momias",
+        "Esfinge",
+        "Cairo",
+        "África",
+        "Antiguo",
+        "Arena",
+        "Jeroglíficos",
+        "Cleopatra"
+      ]
+    },
+    {
+      "palabra": "Turquía",
+      "pistas": [
+        "Estambul",
+        "Mezquita",
+        "Kebab",
+        "Europa",
+        "Asia",
+        "Bósforo",
+        "Santa Sofía",
+        "Globo",
+        "Capadocia",
+        "Té",
+        "Alfombras",
+        "Bizantino"
+      ]
+    },
+    {
+      "palabra": "Dubai",
+      "pistas": [
+        "Rascacielos",
+        "Desierto",
+        "Lujo",
+        "Burj Khalifa",
+        "Mall",
+        "Oro",
+        "Emiratos",
+        "Calor",
+        "Moderno",
+        "Palmera",
+        "Artificial",
+        "Rico"
+      ]
+    },
+    {
+      "palabra": "Venecia",
+      "pistas": [
+        "Canales",
+        "Góndola",
+        "Italia",
+        "Agua",
+        "Puentes",
+        "Máscaras",
+        "Carnaval",
+        "San Marcos",
+        "Romántico",
+        "Hundirse",
+        "Laguna",
+        "Palacio"
+      ]
+    },
+    {
+      "palabra": "Ámsterdam",
+      "pistas": [
+        "Holanda",
+        "Bicicletas",
+        "Canales",
+        "Tulipanes",
+        "Van Gogh",
+        "Molinos",
+        "Queso",
+        "Liberal",
+        "Puentes",
+        "Casa Ana Frank",
+        "Europa",
+        "Puerto"
+      ]
+    },
+    {
+      "palabra": "Marruecos",
+      "pistas": [
+        "Marrakech",
+        "Desierto",
+        "Sahara",
+        "Té",
+        "Menta",
+        "Medina",
+        "Alfombras",
+        "África",
+        "Especias",
+        "Tajine",
+        "Camello",
+        "Zoco"
+      ]
+    },
+    {
+      "palabra": "Islandia",
+      "pistas": [
+        "Vikingos",
+        "Geiseres",
+        "Volcanes",
+        "Aurora",
+        "Boreal",
+        "Frío",
+        "Reikiavik",
+        "Glaciares",
+        "Aguas",
+        "Termales",
+        "Isla",
+        "Europa"
+      ]
+    },
+    {
+      "palabra": "Suiza",
+      "pistas": [
+        "Chocolate",
+        "Reloj",
+        "Alpes",
+        "Neutral",
+        "Bancos",
+        "Queso",
+        "Esquí",
+        "Montañas",
+        "Ginebra",
+        "Zurich",
+        "Europa",
+        "Preciso"
+      ]
+    },
+    {
+      "palabra": "Noruega",
+      "pistas": [
+        "Fiordos",
+        "Vikingos",
+        "Oslo",
+        "Aurora",
+        "Boreal",
+        "Salmón",
+        "Frío",
+        "Escandinavia",
+        "Petróleo",
+        "Europa",
+        "Norte",
+        "Bergen"
+      ]
+    },
+    {
+      "palabra": "Vietnam",
+      "pistas": [
+        "Hanoi",
+        "Saigón",
+        "Guerra",
+        "Pho",
+        "Bahía",
+        "Halong",
+        "Asia",
+        "Arroz",
+        "Conical",
+        "Sombrero",
+        "Moto",
+        "Tropical"
+      ]
+    },
+    {
+      "palabra": "Kenia",
+      "pistas": [
+        "Safari",
+        "Leones",
+        "Masái",
+        "Nairobi",
+        "África",
+        "Kilimanjaro",
+        "Sabana",
+        "Animales",
+        "Corredor",
+        "Maratón",
+        "Elefantes",
+        "Parque"
+      ]
+    },
+    {
+      "palabra": "Irlanda",
+      "pistas": [
+        "Dublín",
+        "Verde",
+        "Trébol",
+        "Cerveza",
+        "Guiness",
+        "Duendes",
+        "Celta",
+        "Patricks",
+        "Whiskey",
+        "Acantilados",
+        "Europa",
+        "Isla"
+      ]
+    },
+    {
+      "palabra": "Barcelona",
+      "pistas": [
+        "Gaudí",
+        "Sagrada Familia",
+        "Catalunya",
+        "España",
+        "Mediterráneo",
+        "Ramblas",
+        "Messi",
+        "Tapas",
+        "Playa",
+        "Modernismo",
+        "Parque Güell",
+        "Catalán"
+      ]
+    },
+    {
+      "palabra": "Praga",
+      "pistas": [
+        "República Checa",
+        "Reloj",
+        "Astronómico",
+        "Cerveza",
+        "Puente",
+        "Carlos",
+        "Castillo",
+        "Europa",
+        "Medieval",
+        "Dorado",
+        "Ciudad",
+        "Vieja"
+      ]
+    },
+    {
+      "palabra": "Cuba",
+      "pistas": [
+        "Habana",
+        "Cigarro",
+        "Ron",
+        "Salsa",
+        "Caribe",
+        "Fidel",
+        "Clásicos",
+        "Autos",
+        "Playa",
+        "Comunismo",
+        "Mojito",
+        "Varadero"
+      ]
+    },
+    {
+      "palabra": "Jerusalén",
+      "pistas": [
+        "Israel",
+        "Sagrada",
+        "Tres religiones",
+        "Muro",
+        "Lamentos",
+        "Mezquita",
+        "Iglesia",
+        "Antigua",
+        "Conflicto",
+        "Histórica",
+        "Oriente",
+        "Medio"
+      ]
+    }
+  ]
+}

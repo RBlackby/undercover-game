@@ -1,0 +1,481 @@
+{
+  "categoria": "Bíblica",
+  "palabras": [
+    {
+      "palabra": "Moisés",
+      "pistas": [
+        "Egipto",
+        "Mar Rojo",
+        "Tablas",
+        "Diez Mandamientos",
+        "Zarza",
+        "Ardiente",
+        "Éxodo",
+        "Faraón",
+        "Bastón",
+        "Líder",
+        "Liberación",
+        "Monte Sinaí"
+      ]
+    },
+    {
+      "palabra": "Noé",
+      "pistas": [
+        "Arca",
+        "Diluvio",
+        "Animales",
+        "Parejas",
+        "Cuarenta días",
+        "Lluvia",
+        "Paloma",
+        "Arcoíris",
+        "Pacto",
+        "Obediencia",
+        "Salvación",
+        "Madera"
+      ]
+    },
+    {
+      "palabra": "David",
+      "pistas": [
+        "Rey",
+        "Goliat",
+        "Honda",
+        "Piedra",
+        "Pastor",
+        "Salmos",
+        "Arpa",
+        "Israel",
+        "Guerrero",
+        "Ungido",
+        "Jerusalén",
+        "Corazón de Dios"
+      ]
+    },
+    {
+      "palabra": "Jonás",
+      "pistas": [
+        "Ballena",
+        "Pez",
+        "Tres días",
+        "Nínive",
+        "Profeta",
+        "Desobediencia",
+        "Mar",
+        "Tormenta",
+        "Barco",
+        "Arrepentimiento",
+        "Ciudad",
+        "Predicar"
+      ]
+    },
+    {
+      "palabra": "Daniel",
+      "pistas": [
+        "Leones",
+        "Foso",
+        "Babilonia",
+        "Sueños",
+        "Interpretar",
+        "Oración",
+        "Fieles",
+        "Horno",
+        "Amigos",
+        "Profeta",
+        "Sabiduría",
+        "Visiones"
+      ]
+    },
+    {
+      "palabra": "Abraham",
+      "pistas": [
+        "Fe",
+        "Padre",
+        "Naciones",
+        "Isaac",
+        "Sacrificio",
+        "Monte",
+        "Promesa",
+        "Descendencia",
+        "Estrellas",
+        "Pacto",
+        "Obediencia",
+        "Patriarca"
+      ]
+    },
+    {
+      "palabra": "Sansón",
+      "pistas": [
+        "Fuerza",
+        "Cabello",
+        "Dalila",
+        "Filisteos",
+        "Columnas",
+        "Templo",
+        "Juez",
+        "León",
+        "Mandíbula",
+        "Asno",
+        "Ciego",
+        "Traición"
+      ]
+    },
+    {
+      "palabra": "José",
+      "pistas": [
+        "Túnica",
+        "Colores",
+        "Sueños",
+        "Egipto",
+        "Faraón",
+        "Hermanos",
+        "Pozo",
+        "Vendido",
+        "Prisión",
+        "Perdón",
+        "Trigo",
+        "Hambruna"
+      ]
+    },
+    {
+      "palabra": "María",
+      "pistas": [
+        "Virgen",
+        "Madre",
+        "Jesús",
+        "Nazaret",
+        "Ángel",
+        "Gabriel",
+        "Anunciación",
+        "Belén",
+        "Gracia",
+        "Bendita",
+        "Visita",
+        "Magnificat"
+      ]
+    },
+    {
+      "palabra": "Pedro",
+      "pistas": [
+        "Apóstol",
+        "Pescador",
+        "Roca",
+        "Llaves",
+        "Reino",
+        "Negación",
+        "Gallo",
+        "Pentecostés",
+        "Caminó",
+        "Agua",
+        "Líder",
+        "Iglesia"
+      ]
+    },
+    {
+      "palabra": "Pablo",
+      "pistas": [
+        "Saulo",
+        "Conversión",
+        "Damasco",
+        "Ceguera",
+        "Apóstol",
+        "Cartas",
+        "Epístolas",
+        "Misionero",
+        "Gentiles",
+        "Evangelio",
+        "Prisión",
+        "Roma"
+      ]
+    },
+    {
+      "palabra": "Juan Bautista",
+      "pistas": [
+        "Bautizar",
+        "Río",
+        "Jordán",
+        "Desierto",
+        "Profeta",
+        "Langostas",
+        "Miel",
+        "Precursor",
+        "Decapitado",
+        "Herodes",
+        "Camino",
+        "Preparar"
+      ]
+    },
+    {
+      "palabra": "Salomón",
+      "pistas": [
+        "Sabio",
+        "Rey",
+        "Templo",
+        "Jerusalén",
+        "Juicio",
+        "Bebé",
+        "Espada",
+        "Reina",
+        "Saba",
+        "Proverbios",
+        "Riqueza",
+        "Gloria"
+      ]
+    },
+    {
+      "palabra": "Ester",
+      "pistas": [
+        "Reina",
+        "Persia",
+        "Judía",
+        "Belleza",
+        "Valentía",
+        "Ayuno",
+        "Pueblo",
+        "Salvación",
+        "Hamán",
+        "Mardoqueo",
+        "Concurso",
+        "Festividad"
+      ]
+    },
+    {
+      "palabra": "Job",
+      "pistas": [
+        "Sufrimiento",
+        "Prueba",
+        "Paciencia",
+        "Satanás",
+        "Íntegro",
+        "Recto",
+        "Hijos",
+        "Riqueza",
+        "Amigos",
+        "Restauración",
+        "Fe",
+        "Perseverancia"
+      ]
+    },
+    {
+      "palabra": "Elías",
+      "pistas": [
+        "Profeta",
+        "Fuego",
+        "Cielo",
+        "Baal",
+        "Monte Carmelo",
+        "Lluvia",
+        "Sequía",
+        "Acab",
+        "Jezabel",
+        "Cuervos",
+        "Arrebatado",
+        "Carro"
+      ]
+    },
+    {
+      "palabra": "Rut",
+      "pistas": [
+        "Moabita",
+        "Lealtad",
+        "Noemí",
+        "Suegra",
+        "Espigar",
+        "Booz",
+        "Redención",
+        "Amor",
+        "Linaje",
+        "David",
+        "Fidelidad",
+        "Cosecha"
+      ]
+    },
+    {
+      "palabra": "Adán",
+      "pistas": [
+        "Primer",
+        "Hombre",
+        "Edén",
+        "Eva",
+        "Costilla",
+        "Creación",
+        "Paraíso",
+        "Fruto",
+        "Prohibido",
+        "Serpiente",
+        "Pecado",
+        "Expulsión"
+      ]
+    },
+    {
+      "palabra": "Eva",
+      "pistas": [
+        "Primera",
+        "Mujer",
+        "Adán",
+        "Edén",
+        "Manzana",
+        "Serpiente",
+        "Tentación",
+        "Árbol",
+        "Conocimiento",
+        "Madre",
+        "Vivientes",
+        "Costilla"
+      ]
+    },
+    {
+      "palabra": "Zacarías",
+      "pistas": [
+        "Sacerdote",
+        "Mudo",
+        "Ángel",
+        "Juan",
+        "Bautista",
+        "Padre",
+        "Isabel",
+        "Anciano",
+        "Templo",
+        "Incredulidad",
+        "Profecía",
+        "Magnificat"
+      ]
+    },
+    {
+      "palabra": "Josué",
+      "pistas": [
+        "Líder",
+        "Moisés",
+        "Sucesor",
+        "Jericó",
+        "Murallas",
+        "Trompetas",
+        "Canaán",
+        "Conquista",
+        "Tierra",
+        "Prometida",
+        "Valiente",
+        "Sol"
+      ]
+    },
+    {
+      "palabra": "Samuel",
+      "pistas": [
+        "Profeta",
+        "Juez",
+        "Ana",
+        "Madre",
+        "Templo",
+        "Niño",
+        "Llamado",
+        "Voz",
+        "Ungió",
+        "Reyes",
+        "Saúl",
+        "David"
+      ]
+    },
+    {
+      "palabra": "Gedeón",
+      "pistas": [
+        "Juez",
+        "Trescientos",
+        "Madianitas",
+        "Antorchas",
+        "Cántaros",
+        "Trompetas",
+        "Ángel",
+        "Vellón",
+        "Señal",
+        "Victoria",
+        "Débil",
+        "Valiente"
+      ]
+    },
+    {
+      "palabra": "Débora",
+      "pistas": [
+        "Profetisa",
+        "Juez",
+        "Mujer",
+        "Líder",
+        "Barac",
+        "Batalla",
+        "Cántico",
+        "Israel",
+        "Palmera",
+        "Sabiduría",
+        "Victoria",
+        "Sísara"
+      ]
+    },
+    {
+      "palabra": "Lázaro",
+      "pistas": [
+        "Resucitado",
+        "Betania",
+        "Hermanas",
+        "Marta",
+        "María",
+        "Cuatro días",
+        "Tumba",
+        "Jesús",
+        "Lloró",
+        "Milagro",
+        "Vendas",
+        "Amigo"
+      ]
+    },
+    {
+      "palabra": "Tomás",
+      "pistas": [
+        "Apóstol",
+        "Dudar",
+        "Incredulidad",
+        "Heridas",
+        "Tocar",
+        "Resurrección",
+        "Fe",
+        "Señor mío",
+        "Dios mío",
+        "Ver",
+        "Creer",
+        "Gemelo"
+      ]
+    },
+    {
+      "palabra": "Judas",
+      "pistas": [
+        "Traición",
+        "Beso",
+        "Treinta",
+        "Monedas",
+        "Plata",
+        "Iscariote",
+        "Apóstol",
+        "Remordimiento",
+        "Ahorcarse",
+        "Jesús",
+        "Entregar",
+        "Jardín"
+      ]
+    },
+    {
+      "palabra": "Matusalén",
+      "pistas": [
+        "Anciano",
+        "Longevidad",
+        "Novecientos",
+        "Años",
+        "Génesis",
+        "Antediluviano",
+        "Enoc",
+        "Padre",
+        "Lamec",
+        "Hijo",
+        "Vivió",
+        "Más"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,617 @@
+{
+  "categoria": "Objetos",
+  "palabras": [
+    {
+      "palabra": "Reloj",
+      "pistas": [
+        "Tiempo",
+        "Manecillas",
+        "Hora",
+        "Muñeca",
+        "Pared",
+        "Alarma",
+        "Digital",
+        "Puntual",
+        "Minutos",
+        "Segundos",
+        "Cronómetro",
+        "Pulsera"
+      ]
+    },
+    {
+      "palabra": "Paraguas",
+      "pistas": [
+        "Lluvia",
+        "Abrir",
+        "Tela",
+        "Mojado",
+        "Protección",
+        "Mango",
+        "Plegable",
+        "Varillas",
+        "Redondo",
+        "Temporal",
+        "Impermeable",
+        "Sombrilla"
+      ]
+    },
+    {
+      "palabra": "Llave",
+      "pistas": [
+        "Puerta",
+        "Metal",
+        "Cerradura",
+        "Abrir",
+        "Seguridad",
+        "Dientes",
+        "Llavero",
+        "Casa",
+        "Auto",
+        "Entrada",
+        "Cerrar",
+        "Acceso"
+      ]
+    },
+    {
+      "palabra": "Espejo",
+      "pistas": [
+        "Reflejo",
+        "Cristal",
+        "Imagen",
+        "Baño",
+        "Verse",
+        "Marco",
+        "Peinarse",
+        "Vanidad",
+        "Brillante",
+        "Maquillaje",
+        "Simetría",
+        "Narciso"
+      ]
+    },
+    {
+      "palabra": "Tijeras",
+      "pistas": [
+        "Cortar",
+        "Metal",
+        "Filo",
+        "Dos",
+        "Hojas",
+        "Papel",
+        "Abrir",
+        "Cerrar",
+        "Manualidades",
+        "Peluquería",
+        "Afilado",
+        "Punta"
+      ]
+    },
+    {
+      "palabra": "Guitarra",
+      "pistas": [
+        "Música",
+        "Cuerdas",
+        "Tocar",
+        "Instrumento",
+        "Seis",
+        "Acústica",
+        "Eléctrica",
+        "Rasguear",
+        "Acordes",
+        "Madera",
+        "Rock",
+        "Mástil"
+      ]
+    },
+    {
+      "palabra": "Brújula",
+      "pistas": [
+        "Norte",
+        "Orientación",
+        "Aguja",
+        "Magnético",
+        "Dirección",
+        "Perdido",
+        "Navegación",
+        "Explorador",
+        "Puntos",
+        "Cardinales",
+        "Círculo",
+        "Aventura"
+      ]
+    },
+    {
+      "palabra": "Linterna",
+      "pistas": [
+        "Luz",
+        "Oscuridad",
+        "Pilas",
+        "Batería",
+        "Iluminar",
+        "Portátil",
+        "Noche",
+        "Camping",
+        "Foco",
+        "LED",
+        "Emergencia",
+        "Apagar"
+      ]
+    },
+    {
+      "palabra": "Maleta",
+      "pistas": [
+        "Viaje",
+        "Equipaje",
+        "Ropa",
+        "Ruedas",
+        "Aeropuerto",
+        "Vacaciones",
+        "Empacar",
+        "Cerrar",
+        "Candado",
+        "Guardar",
+        "Turismo",
+        "Hotel"
+      ]
+    },
+    {
+      "palabra": "Termómetro",
+      "pistas": [
+        "Temperatura",
+        "Fiebre",
+        "Médico",
+        "Grados",
+        "Mercurio",
+        "Digital",
+        "Salud",
+        "Boca",
+        "Medir",
+        "Enfermo",
+        "Caliente",
+        "Frío"
+      ]
+    },
+    {
+      "palabra": "Martillo",
+      "pistas": [
+        "Clavo",
+        "Herramienta",
+        "Golpear",
+        "Metal",
+        "Mango",
+        "Construcción",
+        "Madera",
+        "Carpintero",
+        "Fuerza",
+        "Cabeza",
+        "Obra",
+        "Pegar"
+      ]
+    },
+    {
+      "palabra": "Cámara",
+      "pistas": [
+        "Foto",
+        "Imagen",
+        "Lente",
+        "Flash",
+        "Memoria",
+        "Capturar",
+        "Recuerdo",
+        "Digital",
+        "Enfoque",
+        "Zoom",
+        "Fotógrafo",
+        "Selfie"
+      ]
+    },
+    {
+      "palabra": "Libro",
+      "pistas": [
+        "Leer",
+        "Páginas",
+        "Historia",
+        "Papel",
+        "Autor",
+        "Capítulos",
+        "Biblioteca",
+        "Portada",
+        "Conocimiento",
+        "Novela",
+        "Palabras",
+        "Hojas"
+      ]
+    },
+    {
+      "palabra": "Teléfono",
+      "pistas": [
+        "Llamar",
+        "Móvil",
+        "Pantalla",
+        "Apps",
+        "Mensajes",
+        "Contactos",
+        "Batería",
+        "Smartphone",
+        "Táctil",
+        "Internet",
+        "Comunicación",
+        "Celular"
+      ]
+    },
+    {
+      "palabra": "Laptop",
+      "pistas": [
+        "Computadora",
+        "Portátil",
+        "Teclado",
+        "Pantalla",
+        "Trabajo",
+        "Internet",
+        "Programar",
+        "Batería",
+        "Ratón",
+        "Software",
+        "Escribir",
+        "Abrir"
+      ]
+    },
+    {
+      "palabra": "Bicicleta",
+      "pistas": [
+        "Pedales",
+        "Ruedas",
+        "Manubrio",
+        "Cadena",
+        "Casco",
+        "Ejercicio",
+        "Dos",
+        "Transporte",
+        "Velocidades",
+        "Timbre",
+        "Frenos",
+        "Ciclista"
+      ]
+    },
+    {
+      "palabra": "Ventilador",
+      "pistas": [
+        "Aire",
+        "Aspas",
+        "Fresco",
+        "Girar",
+        "Calor",
+        "Velocidad",
+        "Verano",
+        "Eléctrico",
+        "Viento",
+        "Ruido",
+        "Refrescar",
+        "Techo"
+      ]
+    },
+    {
+      "palabra": "Mochila",
+      "pistas": [
+        "Espalda",
+        "Cargar",
+        "Estudiante",
+        "Libros",
+        "Zipper",
+        "Tirantes",
+        "Bolsillos",
+        "Escuela",
+        "Viaje",
+        "Útiles",
+        "Camping",
+        "Portátil"
+      ]
+    },
+    {
+      "palabra": "Lámpara",
+      "pistas": [
+        "Luz",
+        "Iluminar",
+        "Bombilla",
+        "Mesa",
+        "Noche",
+        "Leer",
+        "Pantalla",
+        "Apagar",
+        "Encender",
+        "Escritorio",
+        "Brillo",
+        "Base"
+      ]
+    },
+    {
+      "palabra": "Sofá",
+      "pistas": [
+        "Sentarse",
+        "Sala",
+        "Cojines",
+        "Cómodo",
+        "Mueble",
+        "Descansar",
+        "Tela",
+        "Brazos",
+        "Respaldo",
+        "Ver TV",
+        "Acostarse",
+        "Visitas"
+      ]
+    },
+    {
+      "palabra": "Microondas",
+      "pistas": [
+        "Calentar",
+        "Cocina",
+        "Rápido",
+        "Ondas",
+        "Plato",
+        "Girar",
+        "Minutos",
+        "Timer",
+        "Botones",
+        "Comida",
+        "Hornear",
+        "Beep"
+      ]
+    },
+    {
+      "palabra": "Refrigerador",
+      "pistas": [
+        "Frío",
+        "Comida",
+        "Conservar",
+        "Hielo",
+        "Cocina",
+        "Congelador",
+        "Puerta",
+        "Bebidas",
+        "Eléctrico",
+        "Alimentos",
+        "Nevera",
+        "Frescos"
+      ]
+    },
+    {
+      "palabra": "Audífonos",
+      "pistas": [
+        "Música",
+        "Oídos",
+        "Sonido",
+        "Cable",
+        "Inalámbricos",
+        "Bluetooth",
+        "Escuchar",
+        "Privado",
+        "Volumen",
+        "Cancelación",
+        "Ruido",
+        "Auriculares"
+      ]
+    },
+    {
+      "palabra": "Calculadora",
+      "pistas": [
+        "Números",
+        "Matemáticas",
+        "Sumar",
+        "Botones",
+        "Pantalla",
+        "Operaciones",
+        "Estudiante",
+        "Resultado",
+        "Científica",
+        "Dígitos",
+        "Calcular",
+        "Pilas"
+      ]
+    },
+    {
+      "palabra": "Balón",
+      "pistas": [
+        "Redondo",
+        "Jugar",
+        "Deportes",
+        "Aire",
+        "Patear",
+        "Fútbol",
+        "Inflar",
+        "Pelota",
+        "Botar",
+        "Cuero",
+        "Cancha",
+        "Equipo"
+      ]
+    },
+    {
+      "palabra": "Almohada",
+      "pistas": [
+        "Dormir",
+        "Suave",
+        "Cabeza",
+        "Cama",
+        "Descanso",
+        "Plumas",
+        "Funda",
+        "Cómoda",
+        "Noche",
+        "Sueño",
+        "Relleno",
+        "Cervical"
+      ]
+    },
+    {
+      "palabra": "Plancha",
+      "pistas": [
+        "Ropa",
+        "Caliente",
+        "Arrugas",
+        "Vapor",
+        "Alisar",
+        "Tabla",
+        "Eléctrica",
+        "Camisa",
+        "Presionar",
+        "Metal",
+        "Base",
+        "Temperatura"
+      ]
+    },
+    {
+      "palabra": "Secadora",
+      "pistas": [
+        "Pelo",
+        "Aire",
+        "Caliente",
+        "Baño",
+        "Mojado",
+        "Eléctrica",
+        "Ruido",
+        "Velocidad",
+        "Peinar",
+        "Secar",
+        "Ducha",
+        "Estilo"
+      ]
+    },
+    {
+      "palabra": "Despertador",
+      "pistas": [
+        "Alarma",
+        "Mañana",
+        "Hora",
+        "Sonar",
+        "Despertar",
+        "Reloj",
+        "Snooze",
+        "Noche",
+        "Digital",
+        "Puntual",
+        "Dormir",
+        "Ruido"
+      ]
+    },
+    {
+      "palabra": "Balanza",
+      "pistas": [
+        "Peso",
+        "Medir",
+        "Kilogramos",
+        "Baño",
+        "Cocina",
+        "Gramos",
+        "Digital",
+        "Equilibrio",
+        "Números",
+        "Báscula",
+        "Plataforma",
+        "Dieta"
+      ]
+    },
+    {
+      "palabra": "Pincel",
+      "pistas": [
+        "Pintar",
+        "Arte",
+        "Cerdas",
+        "Mango",
+        "Color",
+        "Lienzo",
+        "Artista",
+        "Pelo",
+        "Acuarela",
+        "Óleo",
+        "Trazo",
+        "Paleta"
+      ]
+    },
+    {
+      "palabra": "Gafas",
+      "pistas": [
+        "Ver",
+        "Lentes",
+        "Ojos",
+        "Vista",
+        "Cristales",
+        "Marco",
+        "Anteojos",
+        "Óptica",
+        "Sol",
+        "Graduación",
+        "Nariz",
+        "Leer"
+      ]
+    },
+    {
+      "palabra": "Cartera",
+      "pistas": [
+        "Dinero",
+        "Bolsillo",
+        "Tarjetas",
+        "Billete",
+        "Cuero",
+        "Documentos",
+        "Identificación",
+        "Monedas",
+        "Guardar",
+        "Pagar",
+        "Personal",
+        "Billetera"
+      ]
+    },
+    {
+      "palabra": "Peine",
+      "pistas": [
+        "Pelo",
+        "Peinar",
+        "Dientes",
+        "Desenredar",
+        "Baño",
+        "Cabello",
+        "Plástico",
+        "Estilo",
+        "Liso",
+        "Orden",
+        "Cepillo",
+        "Cuidado"
+      ]
+    },
+    {
+      "palabra": "Sartén",
+      "pistas": [
+        "Cocinar",
+        "Freír",
+        "Mango",
+        "Estufa",
+        "Metal",
+        "Huevos",
+        "Aceite",
+        "Caliente",
+        "Antiadherente",
+        "Redonda",
+        "Comida",
+        "Cocina"
+      ]
+    },
+    {
+      "palabra": "Reloj de Arena",
+      "pistas": [
+        "Tiempo",
+        "Granos",
+        "Caer",
+        "Voltear",
+        "Vidrio",
+        "Antiguo",
+        "Medir",
+        "Juegos",
+        "Minutos",
+        "Fluir",
+        "Timer",
+        "Clásico"
+      ]
+    }
+  ]
+}

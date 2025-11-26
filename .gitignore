@@ -1,0 +1,15 @@
+# Carpetas de entorno virtual
+env/
+# Si usas venv, también puedes agregar esta línea:
+# venv/
+
+# Archivos de caché de Python
+__pycache__/
+*.pyc
+
+# Archivos de la configuración del editor VS Code (Opcional, pero recomendado)
+.vscode/
+
+# Archivos temporales del sistema operativo, etc.
+*~
+*.log

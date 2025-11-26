@@ -1,0 +1,583 @@
+{
+  "categoria": "Películas",
+  "palabras": [
+    {
+      "palabra": "Titanic",
+      "pistas": [
+        "Barco",
+        "Hundimiento",
+        "Iceberg",
+        "Romance",
+        "DiCaprio",
+        "Océano",
+        "1912",
+        "Tragedia",
+        "Jack",
+        "Rose",
+        "Diamante",
+        "Corazón"
+      ]
+    },
+    {
+      "palabra": "Matrix",
+      "pistas": [
+        "Realidad",
+        "Virtual",
+        "Neo",
+        "Píldora",
+        "Código",
+        "Verde",
+        "Computadora",
+        "Elegido",
+        "Acción",
+        "Futuro",
+        "Simulación",
+        "Keanu"
+      ]
+    },
+    {
+      "palabra": "Avengers",
+      "pistas": [
+        "Marvel",
+        "Superhéroes",
+        "Equipo",
+        "Vengadores",
+        "Thanos",
+        "Iron Man",
+        "Thor",
+        "Capitán",
+        "Hulk",
+        "Piedras",
+        "Acción",
+        "Universo"
+      ]
+    },
+    {
+      "palabra": "Jurassic Park",
+      "pistas": [
+        "Dinosaurios",
+        "Parque",
+        "Isla",
+        "T-Rex",
+        "Científicos",
+        "Extinción",
+        "Spielberg",
+        "Peligro",
+        "Clonación",
+        "Prehistórico",
+        "Aventura",
+        "ADN"
+      ]
+    },
+    {
+      "palabra": "Harry Potter",
+      "pistas": [
+        "Magia",
+        "Varita",
+        "Hechizos",
+        "Escuela",
+        "Hogwarts",
+        "Voldemort",
+        "Cicatriz",
+        "Quidditch",
+        "Magos",
+        "Libros",
+        "Ron",
+        "Hermione"
+      ]
+    },
+    {
+      "palabra": "Star Wars",
+      "pistas": [
+        "Espacio",
+        "Sable",
+        "Luz",
+        "Fuerza",
+        "Jedi",
+        "Darth Vader",
+        "Galaxia",
+        "Luke",
+        "Leia",
+        "Imperio",
+        "Nave",
+        "Saga"
+      ]
+    },
+    {
+      "palabra": "Toy Story",
+      "pistas": [
+        "Juguetes",
+        "Woody",
+        "Buzz",
+        "Animación",
+        "Pixar",
+        "Andy",
+        "Vaquero",
+        "Astronauta",
+        "Niños",
+        "Amistad",
+        "Aventura",
+        "Vida"
+      ]
+    },
+    {
+      "palabra": "Frozen",
+      "pistas": [
+        "Hielo",
+        "Nieve",
+        "Elsa",
+        "Anna",
+        "Hermanas",
+        "Canción",
+        "Poderes",
+        "Reino",
+        "Olaf",
+        "Frío",
+        "Magia",
+        "Disney"
+      ]
+    },
+    {
+      "palabra": "El Padrino",
+      "pistas": [
+        "Mafia",
+        "Familia",
+        "Italia",
+        "Don",
+        "Corleone",
+        "Crimen",
+        "Poder",
+        "Clásico",
+        "Brando",
+        "Sicilia",
+        "Respeto",
+        "Oferta"
+      ]
+    },
+    {
+      "palabra": "Indiana Jones",
+      "pistas": [
+        "Arqueólogo",
+        "Aventuras",
+        "Látigo",
+        "Sombrero",
+        "Tesoros",
+        "Harrison Ford",
+        "Templos",
+        "Reliquias",
+        "Acción",
+        "Profesor",
+        "Explorador",
+        "Arca"
+      ]
+    },
+    {
+      "palabra": "El Rey León",
+      "pistas": [
+        "Simba",
+        "África",
+        "Hakuna Matata",
+        "Mufasa",
+        "Sabana",
+        "Disney",
+        "Círculo",
+        "Vida",
+        "Pumba",
+        "Timón",
+        "Animación",
+        "Orgullo"
+      ]
+    },
+    {
+      "palabra": "Inception",
+      "pistas": [
+        "Sueños",
+        "Niveles",
+        "DiCaprio",
+        "Realidad",
+        "Trompo",
+        "Arquitecta",
+        "Subconsciente",
+        "Confuso",
+        "Nolan",
+        "Robar",
+        "Ideas",
+        "Dormir"
+      ]
+    },
+    {
+      "palabra": "Pulp Fiction",
+      "pistas": [
+        "Tarantino",
+        "Travolta",
+        "Maletín",
+        "Diner",
+        "Burger",
+        "Samuel Jackson",
+        "Cronología",
+        "Vincent",
+        "Jules",
+        "Crimen",
+        "Diálogos",
+        "Culto"
+      ]
+    },
+    {
+      "palabra": "Shrek",
+      "pistas": [
+        "Ogro",
+        "Verde",
+        "Burro",
+        "Fiona",
+        "Pantano",
+        "Animación",
+        "DreamWorks",
+        "Dragón",
+        "Farquaad",
+        "Cuento",
+        "Hadas",
+        "Capas"
+      ]
+    },
+    {
+      "palabra": "Gladiador",
+      "pistas": [
+        "Roma",
+        "Arena",
+        "Máximo",
+        "Coliseo",
+        "Espada",
+        "Venganza",
+        "Emperador",
+        "Russell Crowe",
+        "Épico",
+        "Lucha",
+        "Esclavitud",
+        "General"
+      ]
+    },
+    {
+      "palabra": "Buscando a Nemo",
+      "pistas": [
+        "Pez",
+        "Payaso",
+        "Océano",
+        "Acuario",
+        "Dory",
+        "Marlin",
+        "Pixar",
+        "Aleta",
+        "Nadando",
+        "Sydney",
+        "Papá",
+        "Azul"
+      ]
+    },
+    {
+      "palabra": "Forrest Gump",
+      "pistas": [
+        "Pluma",
+        "Correr",
+        "Chocolate",
+        "Jenny",
+        "Camarones",
+        "Tom Hanks",
+        "Vietnam",
+        "Ping pong",
+        "Banco",
+        "Tonto",
+        "Historia",
+        "América"
+      ]
+    },
+    {
+      "palabra": "El Señor de los Anillos",
+      "pistas": [
+        "Anillo",
+        "Hobbit",
+        "Frodo",
+        "Gandalf",
+        "Mordor",
+        "Tierra Media",
+        "Épico",
+        "Trilogía",
+        "Gollum",
+        "Aragorn",
+        "Fantasía",
+        "Precious"
+      ]
+    },
+    {
+      "palabra": "E.T.",
+      "pistas": [
+        "Extraterrestre",
+        "Bicicleta",
+        "Luna",
+        "Niño",
+        "Dedo",
+        "Casa",
+        "Teléfono",
+        "Spielberg",
+        "Elliot",
+        "Volar",
+        "Amigo",
+        "Luces"
+      ]
+    },
+    {
+      "palabra": "Coco",
+      "pistas": [
+        "México",
+        "Muertos",
+        "Guitarra",
+        "Miguel",
+        "Familia",
+        "Recuérdame",
+        "Pixar",
+        "Música",
+        "Ofrenda",
+        "Calavera",
+        "Tradición",
+        "Ancestros"
+      ]
+    },
+    {
+      "palabra": "Terminator",
+      "pistas": [
+        "Robot",
+        "Futuro",
+        "Schwarzenegger",
+        "Máquina",
+        "Tiempo",
+        "Sarah Connor",
+        "Skynet",
+        "Ciborg",
+        "Resistencia",
+        "Metal",
+        "Volver",
+        "Apocalipsis"
+      ]
+    },
+    {
+      "palabra": "Up",
+      "pistas": [
+        "Globos",
+        "Casa",
+        "Volar",
+        "Anciano",
+        "Carl",
+        "Russell",
+        "Aventura",
+        "Pixar",
+        "Cataratas",
+        "Niño explorador",
+        "Paraíso",
+        "Colores"
+      ]
+    },
+    {
+      "palabra": "Rocky",
+      "pistas": [
+        "Boxeo",
+        "Philadelphia",
+        "Stallone",
+        "Ring",
+        "Escaleras",
+        "Adrian",
+        "Campeon",
+        "Entrenamiento",
+        "Apollo",
+        "Guantes",
+        "Underdog",
+        "Música"
+      ]
+    },
+    {
+      "palabra": "Spider-Man",
+      "pistas": [
+        "Araña",
+        "Telaraña",
+        "Peter Parker",
+        "Marvel",
+        "Rascacielos",
+        "Nueva York",
+        "Trepar",
+        "Tío Ben",
+        "Poder",
+        "Responsabilidad",
+        "Máscara",
+        "Rojo"
+      ]
+    },
+    {
+      "palabra": "Interestelar",
+      "pistas": [
+        "Espacio",
+        "Agujero negro",
+        "Tiempo",
+        "Dimensiones",
+        "Granja",
+        "Nolan",
+        "Cooper",
+        "Murph",
+        "NASA",
+        "Planetas",
+        "Futuro",
+        "Humanidad"
+      ]
+    },
+    {
+      "palabra": "La La Land",
+      "pistas": [
+        "Musical",
+        "Jazz",
+        "Los Ángeles",
+        "Sueños",
+        "Piano",
+        "Bailar",
+        "Romance",
+        "Emma Stone",
+        "Ryan Gosling",
+        "Cantar",
+        "Estrellas",
+        "Colores"
+      ]
+    },
+    {
+      "palabra": "Volver al Futuro",
+      "pistas": [
+        "DeLorean",
+        "Tiempo",
+        "Marty",
+        "Doc",
+        "1985",
+        "1955",
+        "Reloj",
+        "Rayo",
+        "Patineta",
+        "Padres",
+        "Viaje",
+        "Futuro"
+      ]
+    },
+    {
+      "palabra": "Ratatouille",
+      "pistas": [
+        "Rata",
+        "Cocinar",
+        "París",
+        "Chef",
+        "Restaurante",
+        "Pixar",
+        "Remy",
+        "Linguini",
+        "Sombrero",
+        "Cocina",
+        "Crítico",
+        "Francia"
+      ]
+    },
+    {
+      "palabra": "Batman",
+      "pistas": [
+        "Murciélago",
+        "Gotham",
+        "Bruce Wayne",
+        "Joker",
+        "Capa",
+        "Noche",
+        "Millonario",
+        "Alfred",
+        "Justicia",
+        "Oscuro",
+        "Cueva",
+        "Robin"
+      ]
+    },
+    {
+      "palabra": "Moana",
+      "pistas": [
+        "Océano",
+        "Isla",
+        "Maui",
+        "Navegar",
+        "Polinesia",
+        "Corazón",
+        "Te Fiti",
+        "Disney",
+        "Canción",
+        "Valiente",
+        "Tatuajes",
+        "Abuela"
+      ]
+    },
+    {
+      "palabra": "Gladiador",
+      "pistas": [
+        "Roma",
+        "Arena",
+        "Máximo",
+        "Coliseo",
+        "Espada",
+        "Venganza",
+        "Emperador",
+        "Russell Crowe",
+        "Épico",
+        "Lucha",
+        "Esclavitud",
+        "General"
+      ]
+    },
+    {
+      "palabra": "Cars",
+      "pistas": [
+        "Autos",
+        "Rayo",
+        "McQueen",
+        "Carreras",
+        "Pixar",
+        "Pueblo",
+        "Radiador Springs",
+        "Mate",
+        "Velocidad",
+        "Ruta 66",
+        "Animación",
+        "Piston"
+      ]
+    },
+    {
+      "palabra": "King Kong",
+      "pistas": [
+        "Gorila",
+        "Gigante",
+        "Empire State",
+        "Nueva York",
+        "Isla",
+        "Calavera",
+        "Mujer",
+        "Rubia",
+        "Monstruo",
+        "Rascacielos",
+        "Aviones",
+        "Amor"
+      ]
+    },
+    {
+      "palabra": "Mad Max",
+      "pistas": [
+        "Desierto",
+        "Apocalipsis",
+        "Autos",
+        "Gasolina",
+        "Carretera",
+        "Furia",
+        "Australia",
+        "Persecución",
+        "Violencia",
+        "Máscara",
+        "Caos",
+        "Wasteland"
+      ]
+    }
+  ]
+}

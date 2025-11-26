@@ -1,0 +1,549 @@
+{
+  "categoria": "Animales",
+  "palabras": [
+    {
+      "palabra": "Elefante",
+      "pistas": [
+        "Trompa",
+        "África",
+        "Grande",
+        "Gris",
+        "Mamífero",
+        "Manada",
+        "Colmillos",
+        "Sabana",
+        "Memoria",
+        "Herbívoro",
+        "Orejas",
+        "Paquidermo"
+      ]
+    },
+    {
+      "palabra": "Pingüino",
+      "pistas": [
+        "Ave",
+        "Antártida",
+        "Hielo",
+        "Nadar",
+        "Frío",
+        "Blanco",
+        "Negro",
+        "Pescado",
+        "Colonia",
+        "Formal",
+        "Aletas",
+        "Polo"
+      ]
+    },
+    {
+      "palabra": "Jirafa",
+      "pistas": [
+        "Cuello",
+        "Alto",
+        "Manchas",
+        "Amarillo",
+        "África",
+        "Lengua",
+        "Hojas",
+        "Sabana",
+        "Herbívoro",
+        "Elegante",
+        "Torres",
+        "Acacia"
+      ]
+    },
+    {
+      "palabra": "Delfín",
+      "pistas": [
+        "Mar",
+        "Inteligente",
+        "Saltar",
+        "Gris",
+        "Mamífero",
+        "Silbido",
+        "Nadar",
+        "Juguetón",
+        "Aleta",
+        "Océano",
+        "Acuario",
+        "Ecolocalización"
+      ]
+    },
+    {
+      "palabra": "Águila",
+      "pistas": [
+        "Ave",
+        "Rapaz",
+        "Volar",
+        "Garras",
+        "Montaña",
+        "Vista",
+        "Pico",
+        "Cazador",
+        "Majestuosa",
+        "Nido",
+        "Símbolo",
+        "Cielo"
+      ]
+    },
+    {
+      "palabra": "Tiburón",
+      "pistas": [
+        "Mar",
+        "Dientes",
+        "Aleta",
+        "Depredador",
+        "Océano",
+        "Gris",
+        "Nadar",
+        "Película",
+        "Peligro",
+        "Cartílago",
+        "Mandíbula",
+        "Profundo"
+      ]
+    },
+    {
+      "palabra": "Mariposa",
+      "pistas": [
+        "Volar",
+        "Colores",
+        "Alas",
+        "Flores",
+        "Insecto",
+        "Metamorfosis",
+        "Oruga",
+        "Polen",
+        "Primavera",
+        "Ligera",
+        "Jardín",
+        "Néctar"
+      ]
+    },
+    {
+      "palabra": "Koala",
+      "pistas": [
+        "Australia",
+        "Árbol",
+        "Eucalipto",
+        "Gris",
+        "Marsupial",
+        "Dormir",
+        "Tierno",
+        "Peluche",
+        "Lento",
+        "Bolsa",
+        "Hojas",
+        "Abrazo"
+      ]
+    },
+    {
+      "palabra": "León",
+      "pistas": [
+        "Melena",
+        "Rey",
+        "Felino",
+        "Sabana",
+        "África",
+        "Rugido",
+        "Manada",
+        "Carnívoro",
+        "Cazador",
+        "Dorado",
+        "Fuerza",
+        "Majestuoso"
+      ]
+    },
+    {
+      "palabra": "Ballena",
+      "pistas": [
+        "Mar",
+        "Grande",
+        "Océano",
+        "Mamífero",
+        "Cantar",
+        "Azul",
+        "Saltar",
+        "Profundo",
+        "Krill",
+        "Migración",
+        "Aleta",
+        "Gigante"
+      ]
+    },
+    {
+      "palabra": "Tortuga",
+      "pistas": [
+        "Caparazón",
+        "Lenta",
+        "Verde",
+        "Reptil",
+        "Mar",
+        "Tierra",
+        "Longevidad",
+        "Escudo",
+        "Playa",
+        "Huevos",
+        "Antigua",
+        "Paciencia"
+      ]
+    },
+    {
+      "palabra": "Colibrí",
+      "pistas": [
+        "Pequeño",
+        "Rápido",
+        "Alas",
+        "Néctar",
+        "Flores",
+        "Colorido",
+        "Volar",
+        "Estático",
+        "Pico",
+        "Veloz",
+        "Diminuto",
+        "Brillante"
+      ]
+    },
+    {
+      "palabra": "Oso",
+      "pistas": [
+        "Peludo",
+        "Grande",
+        "Miel",
+        "Hibernar",
+        "Cueva",
+        "Garras",
+        "Bosque",
+        "Marrón",
+        "Peluche",
+        "Fuerte",
+        "Salmón",
+        "Carnívoro"
+      ]
+    },
+    {
+      "palabra": "Búho",
+      "pistas": [
+        "Nocturno",
+        "Sabio",
+        "Plumas",
+        "Volar",
+        "Ratones",
+        "Silencioso",
+        "Ojos",
+        "Grandes",
+        "Árbol",
+        "Girar",
+        "Cabeza",
+        "Cazar"
+      ]
+    },
+    {
+      "palabra": "Serpiente",
+      "pistas": [
+        "Reptil",
+        "Veneno",
+        "Lengua",
+        "Bífida",
+        "Deslizar",
+        "Escamas",
+        "Mudar",
+        "Piel",
+        "Cascabel",
+        "Cobra",
+        "Silbar",
+        "Sin patas"
+      ]
+    },
+    {
+      "palabra": "Camello",
+      "pistas": [
+        "Desierto",
+        "Joroba",
+        "Arena",
+        "Agua",
+        "Resistencia",
+        "África",
+        "Asia",
+        "Dromedario",
+        "Caravana",
+        "Beduino",
+        "Sed",
+        "Mamífero"
+      ]
+    },
+    {
+      "palabra": "Canguro",
+      "pistas": [
+        "Australia",
+        "Saltar",
+        "Marsupial",
+        "Bolsa",
+        "Cría",
+        "Cola",
+        "Fuerte",
+        "Boxeo",
+        "Ágil",
+        "Herbívoro",
+        "Rápido",
+        "Brincar"
+      ]
+    },
+    {
+      "palabra": "Rana",
+      "pistas": [
+        "Anfibio",
+        "Saltar",
+        "Croar",
+        "Charco",
+        "Verde",
+        "Renacuajo",
+        "Lengua",
+        "Larga",
+        "Moscas",
+        "Húmedo",
+        "Metamorfosis",
+        "Lago"
+      ]
+    },
+    {
+      "palabra": "Pulpo",
+      "pistas": [
+        "Tentáculos",
+        "Ocho",
+        "Mar",
+        "Inteligente",
+        "Tinta",
+        "Ventosas",
+        "Molusco",
+        "Camuflar",
+        "Flexible",
+        "Océano",
+        "Camuflaje",
+        "Invertebrado"
+      ]
+    },
+    {
+      "palabra": "Lobo",
+      "pistas": [
+        "Manada",
+        "Aullido",
+        "Luna",
+        "Bosque",
+        "Carnívoro",
+        "Cazador",
+        "Pelaje",
+        "Gris",
+        "Alfa",
+        "Salvaje",
+        "Colmillos",
+        "Noche"
+      ]
+    },
+    {
+      "palabra": "Caballo",
+      "pistas": [
+        "Galopar",
+        "Crines",
+        "Montar",
+        "Cascos",
+        "Relinchar",
+        "Establo",
+        "Correr",
+        "Herbívoro",
+        "Jinete",
+        "Rápido",
+        "Silla",
+        "Rancho"
+      ]
+    },
+    {
+      "palabra": "Pavo Real",
+      "pistas": [
+        "Plumas",
+        "Colorido",
+        "Cola",
+        "Abanico",
+        "Vanidad",
+        "Ave",
+        "Exhibir",
+        "Brillante",
+        "Azul",
+        "Verde",
+        "Majestuoso",
+        "Cortejo"
+      ]
+    },
+    {
+      "palabra": "Hipopótamo",
+      "pistas": [
+        "África",
+        "Río",
+        "Grande",
+        "Gordo",
+        "Agua",
+        "Herbívoro",
+        "Peligroso",
+        "Bocón",
+        "Gris",
+        "Territorial",
+        "Pesado",
+        "Mamífero"
+      ]
+    },
+    {
+      "palabra": "Zorro",
+      "pistas": [
+        "Astuto",
+        "Rojo",
+        "Cola",
+        "Esponjosa",
+        "Mamífero",
+        "Carnívoro",
+        "Bosque",
+        "Orejas",
+        "Puntiagudas",
+        "Nocturno",
+        "Inteligente",
+        "Canino"
+      ]
+    },
+    {
+      "palabra": "Medusa",
+      "pistas": [
+        "Mar",
+        "Gelatinosa",
+        "Tentáculos",
+        "Picar",
+        "Transparente",
+        "Flotar",
+        "Veneno",
+        "Invertebrado",
+        "Campana",
+        "Océano",
+        "Deriva",
+        "Bioluminiscente"
+      ]
+    },
+    {
+      "palabra": "Flamenco",
+      "pistas": [
+        "Rosado",
+        "Patas",
+        "Largas",
+        "Ave",
+        "Laguna",
+        "Cuello",
+        "Curvo",
+        "Elegante",
+        "Camarones",
+        "Tropical",
+        "Equilibrio",
+        "Una pata"
+      ]
+    },
+    {
+      "palabra": "Murciélago",
+      "pistas": [
+        "Nocturno",
+        "Volar",
+        "Mamífero",
+        "Cueva",
+        "Ecolocalización",
+        "Alas",
+        "Sangre",
+        "Vampiro",
+        "Ciego",
+        "Ultrasonido",
+        "Colgarse",
+        "Batman"
+      ]
+    },
+    {
+      "palabra": "Rinoceronte",
+      "pistas": [
+        "Cuerno",
+        "África",
+        "Grande",
+        "Gris",
+        "Pesado",
+        "Piel",
+        "Gruesa",
+        "Herbívoro",
+        "Embestir",
+        "Peligro",
+        "Extinción",
+        "Mamífero"
+      ]
+    },
+    {
+      "palabra": "Panda",
+      "pistas": [
+        "Bambú",
+        "China",
+        "Blanco",
+        "Negro",
+        "Oso",
+        "Tierno",
+        "Amenazado",
+        "Peluche",
+        "Mascota",
+        "WWF",
+        "Montañas",
+        "Herbívoro"
+      ]
+    },
+    {
+      "palabra": "Loro",
+      "pistas": [
+        "Ave",
+        "Hablar",
+        "Colorido",
+        "Pico",
+        "Curvo",
+        "Imitar",
+        "Tropical",
+        "Mascota",
+        "Inteligente",
+        "Ruidoso",
+        "Plumas",
+        "Pirata"
+      ]
+    },
+    {
+      "palabra": "Hormiga",
+      "pistas": [
+        "Pequeña",
+        "Insecto",
+        "Colonia",
+        "Trabajadora",
+        "Fuerza",
+        "Organizada",
+        "Reina",
+        "Túnel",
+        "Picnic",
+        "Seis patas",
+        "Fila",
+        "Cooperación"
+      ]
+    },
+    {
+      "palabra": "Abeja",
+      "pistas": [
+        "Miel",
+        "Panal",
+        "Zumbar",
+        "Picar",
+        "Polen",
+        "Reina",
+        "Colmena",
+        "Amarillo",
+        "Negro",
+        "Insecto",
+        "Trabajadora",
+        "Flores"
+      ]
+    }
+  ]
+}

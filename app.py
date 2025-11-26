@@ -1,0 +1,540 @@
+from flask import Flask, render_template_string, request, session, redirect, url_for
+import json
+import os
+import random
+from datetime import timedelta
+import secrets
+
+app = Flask(__name__)
+# Generar una clave secreta fuerte para la sesión
+app.secret_key = secrets.token_hex(16)
+app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(hours=2)
+
+# Directorio para archivos JSON de categorías
+CATEGORIES_DIR = 'categorias'
+
+def load_categories():
+    """Carga todas las categorías desde los archivos JSON"""
+    categories = {}
+    if not os.path.exists(CATEGORIES_DIR):
+        os.makedirs(CATEGORIES_DIR)
+        return categories
+    
+    for filename in os.listdir(CATEGORIES_DIR):
+        if filename.endswith('.json'):
+            try:
+                with open(os.path.join(CATEGORIES_DIR, filename), 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+                    categories[data['categoria']] = data
+            except Exception as e:
+                print(f"Error cargando {filename}: {e}")
+    return categories
+
+def select_word_and_hints(categories_data, selected_categories):
+    """Selecciona una palabra aleatoria y sus pistas de las categorías seleccionadas"""
+    available_words = []
+    
+    for cat_name in selected_categories:
+        if cat_name in categories_data:
+            cat = categories_data[cat_name]
+            for word_data in cat.get('palabras', []):
+                available_words.append({
+                    'categoria': cat_name,
+                    'palabra': word_data['palabra'],
+                    'pistas': word_data.get('pistas', [])
+                })
+    
+    if not available_words:
+        return None
+    
+    return random.choice(available_words)
+
+# --- PLANTILLAS HTML ---
+
+# Estilos y estructura base
+MAIN_TEMPLATE = '''
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego del Impostor - Royer Blackberry</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 600px;
+            width: 100%;
+        }
+        h1 { color: #667eea; text-align: center; margin-bottom: 30px; font-size: 2.5em; }
+        h2 { color: #764ba2; margin-bottom: 20px; }
+        .form-group { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 8px; color: #333; font-weight: 600; }
+        input[type="number"], input[type="text"], select { 
+            width: 100%; padding: 12px; border: 2px solid #e0e0e0;
+            border-radius: 8px; font-size: 16px; transition: border-color 0.3s;
+        }
+        input[type="number"]:focus, input[type="text"]:focus, select:focus { outline: none; border-color: #667eea; }
+        .checkbox-group {
+            background: #f8f9fa; padding: 15px; border-radius: 8px;
+            min-height: 400px; overflow-y: auto;
+        }
+        .checkbox-item { margin-bottom: 10px; }
+        .checkbox-item input { margin-right: 10px; }
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white; border: none; padding: 15px 30px; font-size: 18px;
+            border-radius: 8px; cursor: pointer; width: 100%;
+            transition: transform 0.2s; font-weight: 600;
+        }
+        button:hover { transform: translateY(-2px); }
+        button:active { transform: translateY(0); }
+        .player-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white; padding: 30px; border-radius: 15px;
+            text-align: center; margin-bottom: 20px;
+        }
+        .player-card h2 { color: white; margin-bottom: 15px; }
+        
+        /* Estilo base de las cajas: Se unifica la apariencia del contenedor. */
+            .word-display {
+                padding: 20px;
+                border-radius: 10px; 
+                font-weight: bold; 
+                margin: 20px 0;
+                cursor: pointer;
+                user-select: none;
+                transition: color 0.1s ease-out, background 0.1s ease-out, font-size 0.1s ease-out, height 0.3s ease-out; 
+                
+                /* 👈 LÍNEA A CAMBIAR */
+                min-height: 140px; /* Altura mínima deseada */
+                /* Ya no es necesario overflow: hidden porque el min-height no lo requiere */
+                font-size: 2em; 
+            }
+        .impostor-display-final {
+            background: #ff6b6b;
+            font-size: 1.5em;
+            cursor: default; /* Anulamos el cursor de puntero para el div final estático */
+        }
+
+        .hint-box {
+            background: #fff3cd; border: 2px solid #ffc107; padding: 15px;
+            border-radius: 8px; margin-top: 15px; text-align: left;
+        }
+        .hint-box p { color: #856404; margin: 5px 0; }
+        .category-badge {
+            background: #764ba2; color: white; padding: 5px 15px;
+            border-radius: 20px; display: inline-block; margin-bottom: 10px;
+        }
+        .btn-secondary { 
+            background: #6c757d; 
+            margin-top: 10px; 
+            background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+        }
+        .warning {
+            background: #fff3cd; border-left: 4px solid #ffc107;
+            padding: 15px; margin-bottom: 20px; border-radius: 4px;
+        }
+        .info {
+            background: #d1ecf1; border-left: 4px solid #0c5460;
+            padding: 15px; margin-bottom: 20px; border-radius: 4px; color: #0c5460;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
+'''
+
+# Template de Configuración
+SETUP_TEMPLATE = MAIN_TEMPLATE.replace('{% block content %}{% endblock %}', '''
+        <h1>🎭 Juego del Impostor</h1>
+        
+        {% if error %}
+        <div class="warning">
+            <strong>⚠️ {{ error }}</strong>
+        </div>
+        {% endif %}
+        
+        <form method="POST" action="{{ url_for('setup') }}">
+            <div class="form-group">
+                <label for="player_names">Nombres de jugadores (separados por comas, ej: Ana, Carlos, Diego, Eva):</label>
+                <input type="text" id="player_names" name="player_names" placeholder="Ej: Jugador1, Jugador2, Jugador3" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="num_impostors">Número de impostores (Basado en el número de nombres ingresados):</label>
+                <select id="num_impostors" name="num_impostors">
+                    <option value="1">1 impostor</option>
+                    <option value="2">2 impostores</option>
+                    <option value="3">3 impostores</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>Categorías disponibles:</label>
+                {% if categories %}
+                <div class="checkbox-group">
+                    {% for cat_name in categories.keys() %}
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="cat_{{ loop.index }}" name="selected_categories" value="{{ cat_name }}" checked>
+                        <label for="cat_{{ loop.index }}" style="display: inline;">{{ cat_name }} ({{ categories[cat_name].palabras|length }} palabras)</label>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% else %}
+                <div class="warning">
+                    No hay categorías disponibles. Por favor, agrega archivos JSON en la carpeta 'categorias'.
+                </div>
+                {% endif %}
+            </div>
+            
+            
+            <div class="form-group">
+                <div class="checkbox-item">
+                    <input type="checkbox" id="hints_enabled" name="hints_enabled" checked>
+                    <label for="hints_enabled" style="display: inline;">Activar pistas (Solo visibles para el impostor)</label>
+                </div>
+            </div>
+            
+            <button type="submit">Iniciar Juego</button>
+        </form><br/>Royer Blackberry - Opensource by Gemini - 2025
+
+'''
+)
+
+# Template de Vista de Jugador (CORREGIDO)
+# Template de Vista de Jugador (CORREGIDO: Altura de tarjeta aumentada y sin icono revelador)
+PLAYER_VIEW_TEMPLATE = MAIN_TEMPLATE.replace('{% block content %}{% endblock %}', '''
+        <script>
+            // Función para revelar u ocultar la información (palabra o rol)
+            function revealInfo(isPressed, isImpostor) {
+                const card = document.getElementById('secret-info-display');
+                
+                if (card) {
+                    if (isPressed) {
+                        // REVELAR
+                        card.style.color = card.getAttribute('data-revealed-color'); 
+                        
+                        if (isImpostor) {
+                            // Si es impostor: cambia fondo a rojo y quita el límite de altura
+                            card.style.background = '#ff6b6b'; 
+                            card.style.fontSize = '1.5em'; 
+                            card.style.maxHeight = '500px'; // Altura suficiente para todo el contenido revelado
+                        } else {
+                            // Civil
+                            card.style.background = 'white';
+                            card.style.fontSize = '2em'; 
+                        }
+                    } else {
+                        // OCULTAR
+                        setTimeout(() => {
+                            card.style.color = card.getAttribute('data-hidden-color');
+                            
+                            // Ambas tarjetas deben volver al estado visual de camuflaje
+                            card.style.background = 'white';
+                            card.style.fontSize = '2em'; // Vuelve al tamaño de camuflaje
+                            
+                            if (isImpostor) {
+                                // Restablece la altura máxima para ocultar la pista y el texto extra
+                                card.style.maxHeight = '140px'; // Vuelve a la altura oculta deseada (aumentada)
+                            }
+                        }, 50); 
+                    }
+                }
+            }
+        </script>
+        <style>
+            /* Estilo base de las cajas: Se unifica la apariencia del contenedor. */
+            .word-display {
+                padding: 20px;
+                border-radius: 10px; 
+                font-weight: bold; 
+                margin: 20px 0;
+                cursor: pointer;
+                user-select: none;
+                transition: color 0.1s ease-out, background 0.1s ease-out, font-size 0.1s ease-out, max-height 0.3s ease-out; 
+                
+                /* **NUEVA ALTURA MÁXIMA POR DEFECTO:** Hace la tarjeta más grande inicialmente */
+                max-height: 140px; 
+                overflow: hidden; /* Oculta el contenido extra */
+                font-size: 2em; 
+            }
+        </style>
+        
+        <h1>🎭 Juego del Impostor</h1>
+        
+        <div class="player-card">
+            {# MUESTRA EL NOMBRE REAL Y EL NÚMERO DE TURNO #}
+            <h2>{{ current_player_name }} ({{ current_player }}/{{ total_players }})</h2>
+            
+            <div class="category-badge">{{ categoria }}</div>
+            
+            {# ========================================================= #}
+            {# Lógica de Visualización (Civil o Impostor) - OCULTOS Y UNIFICADOS #}
+            {# ========================================================= #}
+            
+            {% if is_impostor %}
+                <div class="word-display"
+                     id="secret-info-display"
+                     data-hidden-color="white"      {# Oculto: Color blanco (igual al fondo) #}
+                     data-revealed-color="white"    {# Revelado: Color blanco (sobre fondo rojo) #}
+                     onmousedown="revealInfo(true, true)" 
+                     onmouseup="revealInfo(false, true)" 
+                     ontouchstart="revealInfo(true, true)" 
+                     ontouchend="revealInfo(false, true)"
+                     style="color: white; background: white;"> {# Inicia OCULTO como CIVIL #}
+                    
+                    {# Contenido del impostor (TODO DENTRO) - SIN ICONO REVELADOR #}
+                    ERES EL IMPOSTOR
+                    <p style="margin-top: 15px; font-weight: normal; font-size: 0.8em; color: inherit;">Los demás tienen una palabra secreta.</p>
+                    <p style="font-top: 5px; font-weight: normal; font-size: 0.8em; color: inherit;"><strong>Intenta pasar desapercibido.</strong></p>
+
+                    {# PISTA DE APOYO: VISIBLE AL REVELARSE #}
+                    {% if single_hint %} 
+                    <div class="hint-box" 
+                         style="margin-top: 20px; background: rgba(255, 255, 255, 0.8);"> 
+                        <strong style="color: #856404;">💡 Pista de apoyo:</strong>
+                        <div style="margin-top: 10px;">
+                            <span style="background: white; color: #856404; padding: 8px 15px; border-radius: 20px; font-weight: 600;">{{ single_hint }}</span>
+                        </div>
+                    </div>
+                    {% endif %}
+                    
+                </div>
+                
+            {% else %}
+                <div class="word-display" 
+                     id="secret-info-display"
+                     data-hidden-color="white"      {# Oculto: Color blanco (igual al fondo) #}
+                     data-revealed-color="#667eea"  {# Revelado: Color azul (sobre fondo blanco) #}
+                     onmousedown="revealInfo(true, false)" 
+                     onmouseup="revealInfo(false, false)" 
+                     ontouchstart="revealInfo(true, false)" 
+                     ontouchend="revealInfo(false, false)"
+                     style="color: white; background: white;"> {# Oculta el texto estableciendo su color igual al fondo #}
+                    {{ palabra }}
+                </div>
+            {% endif %}
+
+            <p style="margin-top: 15px;">**¡Mantén presionado sobre la caja para revelar tu rol/palabra!**</p>
+            
+        </div>
+        
+        <form method="POST" action="{{ url_for('next_player') }}">
+            {% if current_player < total_players %}
+            <button type="submit">Siguiente Jugador →</button>
+            {% else %}
+            <button type="submit">Comenzar a Jugar</button>
+            {% endif %}
+        </form>
+        
+        <form method="POST" action="{{ url_for('reset') }}" style="margin-top: 10px;">
+            <button type="submit" class="btn-secondary">Cancelar y Volver al Inicio</button>
+        </form><br/>Royer Blackberry - Opensource by Gemini - 2025
+'''
+)
+
+
+# Template de Juego Completo
+GAME_COMPLETE_TEMPLATE = MAIN_TEMPLATE.replace('{% block content %}{% endblock %}', '''
+        <script>
+            // Función para mostrar la información del impostor y ocultar el botón
+            function mostrarImpostores() {
+                const infoDiv = document.getElementById('impostor-info');
+                const btn = document.getElementById('mostrar-btn');
+                
+                if (infoDiv) {
+                    infoDiv.style.display = 'block'; // Muestra la información
+                }
+                if (btn) {
+                    btn.style.display = 'none'; // Oculta el botón después de presionar
+                }
+            }
+        </script>
+
+        <h1>✅ ¡Información del Juego!</h1>
+        
+        <div class="info">
+            <h2>Datos Generales</h2>
+            <p><strong>Total de jugadores:</strong> {{ total_players }}</p>
+            <p><strong>Categoría:</strong> {{ categoria }}</p>
+        </div>
+
+        {# Botón que se presiona para revelar #}
+        <button id="mostrar-btn" onclick="mostrarImpostores()" style="margin-top: 20px;">
+            Mostrar Impostor{{ "es" if num_impostors > 1 else "" }}
+        </button>
+
+        {# La información del impostor: OCULTA POR DEFECTO #}
+        <div id="impostor-info" 
+             class="impostor-display-final" 
+             style="background: #ff6b6b; display: none; margin-top: 20px;"> 
+            
+            <h3>🎭 Impostor{{ "es" if num_impostors > 1 else "" }} ({{ num_impostors }})</h3>
+            <p style="font-size: 1.2em; margin-top: 10px;">{{ impostor_names }}</p>
+        </div>
+        
+        <div class="warning" style="margin-top: 20px;">
+            <h3>📜 Reglas Rápidas:</h3>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li>Discutan quién creen que es el impostor.</li>
+                <li>Si la mayoría vota correctamente, ganan los civiles.</li>
+                <li>Si votan al civil o no identifican al impostor, gana el impostor.</li>
+            </ul>
+        </div>
+        
+        <form method="POST" action="{{ url_for('reset') }}">
+            <button type="submit">Nuevo Juego</button>
+        </form><br/>Royer Blackberry - Opensource by Gemini - 2025
+'''
+)
+
+# --- RUTAS DE FLASK ---
+
+@app.route('/')
+def index():
+    session.clear()
+    return redirect(url_for('setup'))
+
+@app.route('/setup', methods=['GET', 'POST'])
+def setup():
+    categories = load_categories()
+    
+    if request.method == 'POST':
+        try:
+            player_names_raw = request.form.get('player_names', '')
+            
+            # Limpiar y obtener nombres
+            player_names = [name.strip() for name in player_names_raw.split(',') if name.strip()]
+            num_players = len(player_names)
+            
+            # Obtener y validar el número de impostores
+            num_impostors = int(request.form.get('num_impostors', 1))
+            selected_categories = request.form.getlist('selected_categories')
+            hints_enabled = 'hints_enabled' in request.form
+            
+            # Validaciones
+            if num_players < 3 or num_players > 20:
+                error = "Debes ingresar entre 3 y 20 nombres de jugadores."
+                return render_template_string(SETUP_TEMPLATE, categories=categories, error=error)
+            
+            if not selected_categories:
+                error = "Debes seleccionar al menos una categoría"
+                return render_template_string(SETUP_TEMPLATE, categories=categories, error=error)
+
+            # Ajustar y validar número de impostores (asegura al menos 1 civil)
+            num_impostors = max(1, min(num_impostors, num_players - 1))
+            
+            # Seleccionar palabra y pistas
+            word_data = select_word_and_hints(categories, selected_categories)
+            if not word_data:
+                error = "No hay palabras disponibles en las categorías seleccionadas"
+                return render_template_string(SETUP_TEMPLATE, categories=categories, error=error)
+            
+            # Seleccionar impostores aleatoriamente (índices basados en 0)
+            impostor_indices = random.sample(range(0, num_players), num_impostors)
+            
+            # Guardar en sesión
+            session['player_names'] = player_names
+            session['num_players'] = num_players
+            session['current_player_index'] = 0 # Usamos índice base 0
+            session['palabra'] = word_data['palabra']
+            session['categoria'] = word_data['categoria']
+            session['pistas'] = word_data['pistas']
+            session['hints_enabled'] = hints_enabled
+            session['impostor_indices'] = impostor_indices # Guardamos índices
+            session['num_impostors'] = num_impostors
+            
+            return redirect(url_for('show_player'))
+            
+        except Exception as e:
+            error = f"Error al configurar el juego: {str(e)}"
+            return render_template_string(SETUP_TEMPLATE, categories=categories, error=error)
+    
+    return render_template_string(SETUP_TEMPLATE, categories=categories, error=None)
+
+@app.route('/player')
+def show_player():
+    if 'num_players' not in session:
+        return redirect(url_for('setup'))
+    
+    current_index = session.get('current_player_index', 0)
+    total = session.get('num_players', 0)
+    player_names = session.get('player_names', [])
+    
+    if current_index >= total:
+        return redirect(url_for('game_complete'))
+    
+    # Obtener el nombre del jugador y su número (base 1)
+    current_player_name = player_names[current_index]
+    current_player_number = current_index + 1
+    
+    # Comprobar si es impostor (usando el índice base 0)
+    is_impostor = current_index in session.get('impostor_indices', [])
+    hints_enabled = session.get('hints_enabled', False)
+    hints_list = session.get('pistas', [])
+    
+    # Lógica de Pista Única
+    single_hint = None
+    if is_impostor and hints_enabled and hints_list:
+        single_hint = random.choice(hints_list)
+
+    return render_template_string(PLAYER_VIEW_TEMPLATE,
+                                 current_player=current_player_number, # Número de turno
+                                 current_player_name=current_player_name, # Nombre real
+                                 total_players=total,
+                                 palabra=session.get('palabra', ''),
+                                 categoria=session.get('categoria', ''),
+                                 single_hint=single_hint, 
+                                 is_impostor=is_impostor)
+
+@app.route('/next', methods=['POST'])
+def next_player():
+    if 'current_player_index' in session:
+        session['current_player_index'] += 1
+    return redirect(url_for('show_player'))
+
+@app.route('/complete')
+def game_complete():
+    if 'num_players' not in session or 'impostor_indices' not in session:
+        return redirect(url_for('setup'))
+    
+    # Recalcular los nombres de los impostores para la pantalla final
+    player_names = session.get('player_names', [])
+    impostor_indices = session.get('impostor_indices', [])
+    
+    # Asegurarse de que los índices sean válidos
+    impostor_names = [
+        player_names[i] for i in impostor_indices if i < len(player_names)
+    ]
+    
+    return render_template_string(GAME_COMPLETE_TEMPLATE,
+                                 total_players=session.get('num_players', 0),
+                                 num_impostors=session.get('num_impostors', 1),
+                                 categoria=session.get('categoria', 'N/A'),
+                                 impostor_names=", ".join(impostor_names))
+
+@app.route('/reset', methods=['POST'])
+def reset():
+    session.clear()
+    return redirect(url_for('setup'))
+
+if __name__ == '__main__':
+    # Asegúrate de tener la carpeta 'categorias' con archivos JSON
+    app.run(debug=True, port=5000)

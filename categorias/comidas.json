@@ -1,0 +1,617 @@
+{
+  "categoria": "Comidas",
+  "palabras": [
+    {
+      "palabra": "Pizza",
+      "pistas": [
+        "Italia",
+        "Horno",
+        "Queso",
+        "Masa",
+        "Redonda",
+        "Rebanada",
+        "Tomate",
+        "Pepperoni",
+        "Delivery",
+        "Compartir",
+        "Hornear",
+        "Mozzarella"
+      ]
+    },
+    {
+      "palabra": "Sushi",
+      "pistas": [
+        "Japón",
+        "Arroz",
+        "Pescado",
+        "Alga",
+        "Crudo",
+        "Palillos",
+        "Rollo",
+        "Soya",
+        "Wasabi",
+        "Salmón",
+        "Vinagre",
+        "Nori"
+      ]
+    },
+    {
+      "palabra": "Hamburguesa",
+      "pistas": [
+        "Carne",
+        "Pan",
+        "Lechuga",
+        "Tomate",
+        "Queso",
+        "Parrilla",
+        "Americana",
+        "Papas",
+        "Ketchup",
+        "Mostaza",
+        "Jugosa",
+        "Comida rápida"
+      ]
+    },
+    {
+      "palabra": "Chocolate",
+      "pistas": [
+        "Dulce",
+        "Cacao",
+        "Derretir",
+        "Postre",
+        "Negro",
+        "Leche",
+        "Tableta",
+        "Amargo",
+        "Suiza",
+        "Tentación",
+        "Endorfinas",
+        "Bombón"
+      ]
+    },
+    {
+      "palabra": "Paella",
+      "pistas": [
+        "España",
+        "Arroz",
+        "Mariscos",
+        "Valencia",
+        "Azafrán",
+        "Sartén",
+        "Amarillo",
+        "Camarones",
+        "Tradicional",
+        "Domingo",
+        "Familiar",
+        "Mediterráneo"
+      ]
+    },
+    {
+      "palabra": "Tacos",
+      "pistas": [
+        "México",
+        "Tortilla",
+        "Carne",
+        "Picante",
+        "Cilantro",
+        "Cebolla",
+        "Limón",
+        "Salsa",
+        "Martes",
+        "Pastor",
+        "Doblar",
+        "Callejero"
+      ]
+    },
+    {
+      "palabra": "Croissant",
+      "pistas": [
+        "Francia",
+        "Mantequilla",
+        "Hojaldrado",
+        "Desayuno",
+        "Pan",
+        "París",
+        "Café",
+        "Media luna",
+        "Dorado",
+        "Crujiente",
+        "Panadería",
+        "Levadura"
+      ]
+    },
+    {
+      "palabra": "Helado",
+      "pistas": [
+        "Frío",
+        "Cremoso",
+        "Verano",
+        "Cono",
+        "Sabores",
+        "Vainilla",
+        "Chocolate",
+        "Fresa",
+        "Derretir",
+        "Postre",
+        "Congelar",
+        "Dulce"
+      ]
+    },
+    {
+      "palabra": "Ceviche",
+      "pistas": [
+        "Perú",
+        "Pescado",
+        "Limón",
+        "Crudo",
+        "Marinado",
+        "Fresco",
+        "Cítrico",
+        "Cebolla",
+        "Cilantro",
+        "Mar",
+        "Ácido",
+        "Blanco"
+      ]
+    },
+    {
+      "palabra": "Lasaña",
+      "pistas": [
+        "Italia",
+        "Pasta",
+        "Capas",
+        "Horno",
+        "Queso",
+        "Carne",
+        "Tomate",
+        "Gratinado",
+        "Rectangular",
+        "Bechamel",
+        "Horneado",
+        "Garfield"
+      ]
+    },
+    {
+      "palabra": "Ramen",
+      "pistas": [
+        "Japón",
+        "Fideos",
+        "Caldo",
+        "Caliente",
+        "Huevo",
+        "Sopa",
+        "Palillos",
+        "Instantáneo",
+        "Cerdo",
+        "Picante",
+        "Tazón",
+        "Alga"
+      ]
+    },
+    {
+      "palabra": "Empanada",
+      "pistas": [
+        "Relleno",
+        "Masa",
+        "Doblar",
+        "Horno",
+        "Frita",
+        "Carne",
+        "Repulgue",
+        "Argentina",
+        "Media luna",
+        "Dorada",
+        "Portátil",
+        "Crujiente"
+      ]
+    },
+    {
+      "palabra": "Arepa",
+      "pistas": [
+        "Venezuela",
+        "Colombia",
+        "Maíz",
+        "Rellena",
+        "Redonda",
+        "Desayuno",
+        "Plancha",
+        "Queso",
+        "Carne",
+        "Tradicional",
+        "Masa",
+        "Asar"
+      ]
+    },
+    {
+      "palabra": "Burrito",
+      "pistas": [
+        "México",
+        "Tortilla",
+        "Enrollar",
+        "Frijoles",
+        "Arroz",
+        "Grande",
+        "Tex-Mex",
+        "Envuelto",
+        "Carne",
+        "Guacamole",
+        "Crema",
+        "Portátil"
+      ]
+    },
+    {
+      "palabra": "Falafel",
+      "pistas": [
+        "Garbanzos",
+        "Medio Oriente",
+        "Frito",
+        "Vegetariano",
+        "Bolitas",
+        "Especias",
+        "Verde",
+        "Tahini",
+        "Pita",
+        "Árabe",
+        "Proteína",
+        "Crunchy"
+      ]
+    },
+    {
+      "palabra": "Panqueques",
+      "pistas": [
+        "Desayuno",
+        "Harina",
+        "Redondos",
+        "Miel",
+        "Jarabe",
+        "Maple",
+        "Esponjosos",
+        "Sartén",
+        "Apilar",
+        "Mantequilla",
+        "Dulce",
+        "Hotcakes"
+      ]
+    },
+    {
+      "palabra": "Waffles",
+      "pistas": [
+        "Desayuno",
+        "Cuadros",
+        "Hierro",
+        "Miel",
+        "Crujiente",
+        "Bélgica",
+        "Jarabe",
+        "Forma",
+        "Rejilla",
+        "Dulce",
+        "Mantequilla",
+        "Fresas"
+      ]
+    },
+    {
+      "palabra": "Donas",
+      "pistas": [
+        "Frita",
+        "Dulce",
+        "Agujero",
+        "Glaseada",
+        "Azúcar",
+        "Chocolate",
+        "Chispas",
+        "Redonda",
+        "Postre",
+        "Café",
+        "Homer",
+        "Policía"
+      ]
+    },
+    {
+      "palabra": "Tiramisú",
+      "pistas": [
+        "Italia",
+        "Postre",
+        "Café",
+        "Mascarpone",
+        "Capas",
+        "Galletas",
+        "Cacao",
+        "Licor",
+        "Cremoso",
+        "Dulce",
+        "Levanta",
+        "Ánimo"
+      ]
+    },
+    {
+      "palabra": "Nachos",
+      "pistas": [
+        "México",
+        "Totopos",
+        "Queso",
+        "Jalapeños",
+        "Derretido",
+        "Guacamole",
+        "Crujiente",
+        "Compartir",
+        "Salsa",
+        "Maíz",
+        "Partido",
+        "Cine"
+      ]
+    },
+    {
+      "palabra": "Pad Thai",
+      "pistas": [
+        "Tailandia",
+        "Fideos",
+        "Wok",
+        "Camarones",
+        "Cacahuates",
+        "Tamarindo",
+        "Limón",
+        "Asiático",
+        "Salteado",
+        "Huevo",
+        "Dulce",
+        "Agrio"
+      ]
+    },
+    {
+      "palabra": "Curry",
+      "pistas": [
+        "India",
+        "Especias",
+        "Picante",
+        "Amarillo",
+        "Arroz",
+        "Cremoso",
+        "Pollo",
+        "Vegetales",
+        "Coco",
+        "Sabor",
+        "Intenso",
+        "Asiático"
+      ]
+    },
+    {
+      "palabra": "Fondue",
+      "pistas": [
+        "Suiza",
+        "Queso",
+        "Derretido",
+        "Olla",
+        "Chocolate",
+        "Compartir",
+        "Pan",
+        "Sumergir",
+        "Tenedor",
+        "Caliente",
+        "Cremoso",
+        "Romántico"
+      ]
+    },
+    {
+      "palabra": "Kebab",
+      "pistas": [
+        "Turquía",
+        "Carne",
+        "Vertical",
+        "Pita",
+        "Asado",
+        "Doner",
+        "Rotación",
+        "Yogur",
+        "Salsa",
+        "Medio Oriente",
+        "Rápido",
+        "Callejero"
+      ]
+    },
+    {
+      "palabra": "Dim Sum",
+      "pistas": [
+        "China",
+        "Pequeño",
+        "Vapor",
+        "Bolitas",
+        "Té",
+        "Bambú",
+        "Variedad",
+        "Dumplings",
+        "Cantonés",
+        "Brunch",
+        "Compartir",
+        "Canasta"
+      ]
+    },
+    {
+      "palabra": "Gazpacho",
+      "pistas": [
+        "España",
+        "Sopa",
+        "Fría",
+        "Tomate",
+        "Verano",
+        "Andalucía",
+        "Pepino",
+        "Pimiento",
+        "Licuado",
+        "Refrescante",
+        "Rojo",
+        "Crudo"
+      ]
+    },
+    {
+      "palabra": "Brownie",
+      "pistas": [
+        "Chocolate",
+        "Cuadrado",
+        "Postre",
+        "Húmedo",
+        "Horno",
+        "Dulce",
+        "Nueces",
+        "Fudge",
+        "Americano",
+        "Intenso",
+        "Denso",
+        "Helado"
+      ]
+    },
+    {
+      "palabra": "Bagel",
+      "pistas": [
+        "Pan",
+        "Redondo",
+        "Agujero",
+        "Nueva York",
+        "Hervido",
+        "Salmón",
+        "Queso crema",
+        "Desayuno",
+        "Judío",
+        "Semillas",
+        "Sésamo",
+        "Tostado"
+      ]
+    },
+    {
+      "palabra": "Crêpe",
+      "pistas": [
+        "Francia",
+        "Delgado",
+        "Sartén",
+        "Enrollar",
+        "Dulce",
+        "Salado",
+        "Nutella",
+        "Harina",
+        "París",
+        "Fino",
+        "Doblar",
+        "Plato"
+      ]
+    },
+    {
+      "palabra": "Guacamole",
+      "pistas": [
+        "Aguacate",
+        "México",
+        "Verde",
+        "Limón",
+        "Cilantro",
+        "Cebolla",
+        "Molcajete",
+        "Cremoso",
+        "Totopos",
+        "Salsa",
+        "Fresco",
+        "Picante"
+      ]
+    },
+    {
+      "palabra": "Hummus",
+      "pistas": [
+        "Garbanzos",
+        "Medio Oriente",
+        "Tahini",
+        "Cremoso",
+        "Ajo",
+        "Limón",
+        "Beige",
+        "Untable",
+        "Pita",
+        "Vegetariano",
+        "Proteína",
+        "Saludable"
+      ]
+    },
+    {
+      "palabra": "Pho",
+      "pistas": [
+        "Vietnam",
+        "Sopa",
+        "Fideos",
+        "Caldo",
+        "Res",
+        "Hierbas",
+        "Caliente",
+        "Picante",
+        "Tazón",
+        "Limón",
+        "Asiático",
+        "Reconfortante"
+      ]
+    },
+    {
+      "palabra": "Baguette",
+      "pistas": [
+        "Francia",
+        "Pan",
+        "Largo",
+        "Crujiente",
+        "París",
+        "Levadura",
+        "Panadería",
+        "Fresco",
+        "Corteza",
+        "Sándwich",
+        "Tradicional",
+        "Vara"
+      ]
+    },
+    {
+      "palabra": "Fajitas",
+      "pistas": [
+        "México",
+        "Tortilla",
+        "Carne",
+        "Pollo",
+        "Pimientos",
+        "Cebolla",
+        "Sartén",
+        "Caliente",
+        "Tex-Mex",
+        "Enrollar",
+        "Guacamole",
+        "Parrilla"
+      ]
+    },
+    {
+      "palabra": "Tempura",
+      "pistas": [
+        "Japón",
+        "Frita",
+        "Rebozado",
+        "Camarones",
+        "Vegetales",
+        "Ligero",
+        "Crujiente",
+        "Aceite",
+        "Salsa",
+        "Soya",
+        "Harina",
+        "Dorado"
+      ]
+    },
+    {
+      "palabra": "Croissant de almendras",
+      "pistas": [
+        "Francia",
+        "Hojaldrado",
+        "Dulce",
+        "Relleno",
+        "Almendra",
+        "Mantequilla",
+        "Panadería",
+        "Desayuno",
+        "Crema",
+        "Azúcar",
+        "Dorado",
+        "Delicado"
+      ]
+    }
+  ]
+}
