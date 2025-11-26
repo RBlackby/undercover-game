@@ -213,7 +213,7 @@ SETUP_TEMPLATE = MAIN_TEMPLATE.replace('{% block content %}{% endblock %}', '''
             </div>
             
             <button type="submit">Iniciar Juego</button>
-        </form><br/>Royer Blackberry - Opensource by Gemini - 2025
+        </form><br/>Royer Blackberry - <a href="https://github.com/RBlackby/undercover-game">Repositorio del Juego Undercover</a> - 2025
 
 '''
 )
@@ -283,7 +283,7 @@ PLAYER_VIEW_TEMPLATE = MAIN_TEMPLATE.replace('{% block content %}{% endblock %}'
             {# MUESTRA EL NOMBRE REAL Y EL NÚMERO DE TURNO #}
             <h2>{{ current_player_name }} ({{ current_player }}/{{ total_players }})</h2>
             
-            <div class="category-badge">{{ categoria }}</div>
+            
             
             {# ========================================================= #}
             {# Lógica de Visualización (Civil o Impostor) - OCULTOS Y UNIFICADOS #}
@@ -346,7 +346,7 @@ PLAYER_VIEW_TEMPLATE = MAIN_TEMPLATE.replace('{% block content %}{% endblock %}'
         
         <form method="POST" action="{{ url_for('reset') }}" style="margin-top: 10px;">
             <button type="submit" class="btn-secondary">Cancelar y Volver al Inicio</button>
-        </form><br/>Royer Blackberry - Opensource by Gemini - 2025
+        </form><br/>Royer Blackberry - <a href="https://github.com/RBlackby/undercover-game">Repositorio del Juego Undercover</a> - 2025
 '''
 )
 
@@ -373,7 +373,6 @@ GAME_COMPLETE_TEMPLATE = MAIN_TEMPLATE.replace('{% block content %}{% endblock %
         <div class="info">
             <h2>Datos Generales</h2>
             <p><strong>Total de jugadores:</strong> {{ total_players }}</p>
-            <p><strong>Categoría:</strong> {{ categoria }}</p>
         </div>
 
         {# Botón que se presiona para revelar #}
@@ -388,6 +387,9 @@ GAME_COMPLETE_TEMPLATE = MAIN_TEMPLATE.replace('{% block content %}{% endblock %
             
             <h3>🎭 Impostor{{ "es" if num_impostors > 1 else "" }} ({{ num_impostors }})</h3>
             <p style="font-size: 1.2em; margin-top: 10px;">{{ impostor_names }}</p>
+            <br/>
+            <p><strong>Categoría:</strong> {{ categoria }}</p>
+            <p><strong>PALABRA:</strong> {{ palabra }} </p>
         </div>
         
         <div class="warning" style="margin-top: 20px;">
@@ -401,7 +403,7 @@ GAME_COMPLETE_TEMPLATE = MAIN_TEMPLATE.replace('{% block content %}{% endblock %
         
         <form method="POST" action="{{ url_for('reset') }}">
             <button type="submit">Nuevo Juego</button>
-        </form><br/>Royer Blackberry - Opensource by Gemini - 2025
+        </form><br/>Royer Blackberry - <a href="https://github.com/RBlackby/undercover-game">Repositorio del Juego Undercover</a> - 2025
 '''
 )
 
@@ -524,10 +526,14 @@ def game_complete():
         player_names[i] for i in impostor_indices if i < len(player_names)
     ]
     
+    # --- CAMBIO AQUÍ: OBTENER LA PALABRA SECRETA ---
+    palabra_secreta = session.get('palabra', 'N/A')
+
     return render_template_string(GAME_COMPLETE_TEMPLATE,
                                  total_players=session.get('num_players', 0),
                                  num_impostors=session.get('num_impostors', 1),
                                  categoria=session.get('categoria', 'N/A'),
+                                 palabra=palabra_secreta, # <-- PASAR LA PALABRA
                                  impostor_names=", ".join(impostor_names))
 
 @app.route('/reset', methods=['POST'])
