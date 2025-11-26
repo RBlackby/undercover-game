@@ -13,6 +13,30 @@ app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(hours=2)
 # Directorio para archivos JSON de categorías
 CATEGORIES_DIR = 'categorias'
 
+# --- FUNCIÓN DE UTILIDAD: Generar color brillante/encendido aleatorio (SÓLIDO) ---
+def generate_random_pastel_color():
+    """
+    Genera un color hexadecimal brillante/encendido aleatorio (sólido),
+    que contrasta bien con el texto blanco. (Cambiado de pastel a brillante)
+    """
+    # Inicializa los canales RGB con valores bajos (oscuros, 0 a 150)
+    r = random.randint(0, 150)
+    g = random.randint(0, 150)
+    b = random.randint(0, 150)
+
+    # Elige uno de los canales para forzarlo a ser alto (brillante, 200 a 255)
+    choice = random.choice(['r', 'g', 'b'])
+
+    if choice == 'r':
+        r = random.randint(200, 255)
+    elif choice == 'g':
+        g = random.randint(200, 255)
+    else: # choice == 'b'
+        b = random.randint(200, 255)
+
+    return f'#{r:02x}{g:02x}{b:02x}'
+
+
 def load_categories():
     """Carga todas las categorías desde los archivos JSON"""
     categories = {}
@@ -86,10 +110,11 @@ MAIN_TEMPLATE = '''
             width: 100%; padding: 12px; border: 2px solid #e0e0e0;
             border-radius: 8px; font-size: 16px; transition: border-color 0.3s;
         }
-        input[type="number"]:focus, input[type="text"]:focus, select:focus { outline: none; border-color: #667eea; }
+        input[type="number"]:focus, input[type="text"]:focus, select[type="focus"] { outline: none; border-color: #667eea; }
         .checkbox-group {
             background: #f8f9fa; padding: 15px; border-radius: 8px;
-            min-height: 400px; overflow-y: auto;
+            min-height: 400px; 
+            overflow-y: auto;
         }
         .checkbox-item { margin-bottom: 10px; }
         .checkbox-item input { margin-right: 10px; }
@@ -101,32 +126,32 @@ MAIN_TEMPLATE = '''
         }
         button:hover { transform: translateY(-2px); }
         button:active { transform: translateY(0); }
+        /* ESTILO DE LA TARJETA DEL JUGADOR - USA COLOR SÓLIDO */
         .player-card {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #667eea; /* Color por defecto, será sobreescrito por inline style */
             color: white; padding: 30px; border-radius: 15px;
             text-align: center; margin-bottom: 20px;
+            transition: background 0.5s ease-in-out; 
         }
         .player-card h2 { color: white; margin-bottom: 15px; }
         
-        /* Estilo base de las cajas: Se unifica la apariencia del contenedor. */
-            .word-display {
-                padding: 20px;
-                border-radius: 10px; 
-                font-weight: bold; 
-                margin: 20px 0;
-                cursor: pointer;
-                user-select: none;
-                transition: color 0.1s ease-out, background 0.1s ease-out, font-size 0.1s ease-out, height 0.3s ease-out; 
-                
-                /* 👈 LÍNEA A CAMBIAR */
-                min-height: 140px; /* Altura mínima deseada */
-                /* Ya no es necesario overflow: hidden porque el min-height no lo requiere */
-                font-size: 2em; 
-            }
+        .word-display {
+            padding: 20px;
+            border-radius: 10px; 
+            font-weight: bold; 
+            margin: 20px 0;
+            cursor: pointer;
+            user-select: none;
+            transition: color 0.1s ease-out, background 0.1s ease-out, font-size 0.1s ease-out, max-height 0.3s ease-out; 
+            
+            min-height: 220px; 
+            overflow: hidden; 
+            font-size: 2em; 
+        }
         .impostor-display-final {
             background: #ff6b6b;
             font-size: 1.5em;
-            cursor: default; /* Anulamos el cursor de puntero para el div final estático */
+            cursor: default;
         }
 
         .hint-box {
@@ -161,7 +186,7 @@ MAIN_TEMPLATE = '''
 </html>
 '''
 
-# Template de Configuración
+# Template de Configuración (SIN CAMBIOS)
 SETUP_TEMPLATE = MAIN_TEMPLATE.replace('{% block content %}{% endblock %}', '''
         <h1>🎭 Juego del Impostor</h1>
         
@@ -218,13 +243,13 @@ SETUP_TEMPLATE = MAIN_TEMPLATE.replace('{% block content %}{% endblock %}', '''
 '''
 )
 
-# Template de Vista de Jugador (CORREGIDO)
-# Template de Vista de Jugador (CORREGIDO: Altura de tarjeta aumentada y sin icono revelador)
+# Template de Vista de Jugador
 PLAYER_VIEW_TEMPLATE = MAIN_TEMPLATE.replace('{% block content %}{% endblock %}', '''
         <script>
             // Función para revelar u ocultar la información (palabra o rol)
             function revealInfo(isPressed, isImpostor) {
                 const card = document.getElementById('secret-info-display');
+                const hintBox = document.getElementById('impostor-hint-box'); // Nuevo
                 
                 if (card) {
                     if (isPressed) {
@@ -235,7 +260,10 @@ PLAYER_VIEW_TEMPLATE = MAIN_TEMPLATE.replace('{% block content %}{% endblock %}'
                             // Si es impostor: cambia fondo a rojo y quita el límite de altura
                             card.style.background = '#ff6b6b'; 
                             card.style.fontSize = '1.5em'; 
-                            card.style.maxHeight = '500px'; // Altura suficiente para todo el contenido revelado
+                            card.style.maxHeight = '500px'; 
+                            if (hintBox) {
+                                hintBox.style.display = 'block'; // Muestra la pista
+                            }
                         } else {
                             // Civil
                             card.style.background = 'white';
@@ -248,11 +276,14 @@ PLAYER_VIEW_TEMPLATE = MAIN_TEMPLATE.replace('{% block content %}{% endblock %}'
                             
                             // Ambas tarjetas deben volver al estado visual de camuflaje
                             card.style.background = 'white';
-                            card.style.fontSize = '2em'; // Vuelve al tamaño de camuflaje
+                            card.style.fontSize = '2em'; 
                             
                             if (isImpostor) {
-                                // Restablece la altura máxima para ocultar la pista y el texto extra
-                                card.style.maxHeight = '140px'; // Vuelve a la altura oculta deseada (aumentada)
+                                // Restablece la altura máxima y oculta la pista
+                                card.style.maxHeight = '140px'; 
+                                if (hintBox) {
+                                    hintBox.style.display = 'none'; // Oculta la pista
+                                }
                             }
                         }, 50); 
                     }
@@ -260,7 +291,7 @@ PLAYER_VIEW_TEMPLATE = MAIN_TEMPLATE.replace('{% block content %}{% endblock %}'
             }
         </script>
         <style>
-            /* Estilo base de las cajas: Se unifica la apariencia del contenedor. */
+            /* Estilo para asegurar el camuflaje del contenido */
             .word-display {
                 padding: 20px;
                 border-radius: 10px; 
@@ -270,18 +301,24 @@ PLAYER_VIEW_TEMPLATE = MAIN_TEMPLATE.replace('{% block content %}{% endblock %}'
                 user-select: none;
                 transition: color 0.1s ease-out, background 0.1s ease-out, font-size 0.1s ease-out, max-height 0.3s ease-out; 
                 
-                /* **NUEVA ALTURA MÁXIMA POR DEFECTO:** Hace la tarjeta más grande inicialmente */
                 max-height: 140px; 
-                overflow: hidden; /* Oculta el contenido extra */
+                overflow: hidden; 
                 font-size: 2em; 
+            }
+            
+            /* Asegurarse de que la pista inicie oculta para el camuflaje */
+            .hint-box.hidden {
+                display: none;
             }
         </style>
         
         <h1>🎭 Juego del Impostor</h1>
         
-        <div class="player-card">
+        {# SE INYECTA EL ESTILO DE COLOR SÓLIDO Y BRILLANTE #}
+        <div class="player-card" style="{{ player_card_style }}">
             {# MUESTRA EL NOMBRE REAL Y EL NÚMERO DE TURNO #}
             <h2>{{ current_player_name }} ({{ current_player }}/{{ total_players }})</h2>
+            
             
             
             
@@ -292,22 +329,23 @@ PLAYER_VIEW_TEMPLATE = MAIN_TEMPLATE.replace('{% block content %}{% endblock %}'
             {% if is_impostor %}
                 <div class="word-display"
                      id="secret-info-display"
-                     data-hidden-color="white"      {# Oculto: Color blanco (igual al fondo) #}
-                     data-revealed-color="white"    {# Revelado: Color blanco (sobre fondo rojo) #}
+                     data-hidden-color="white"       {# Oculto: Color blanco (igual al fondo) #}
+                     data-revealed-color="white"     {# Revelado: Color blanco (sobre fondo rojo) #}
                      onmousedown="revealInfo(true, true)" 
                      onmouseup="revealInfo(false, true)" 
                      ontouchstart="revealInfo(true, true)" 
                      ontouchend="revealInfo(false, true)"
                      style="color: white; background: white;"> {# Inicia OCULTO como CIVIL #}
                     
-                    {# Contenido del impostor (TODO DENTRO) - SIN ICONO REVELADOR #}
+                    {# Contenido del impostor #}
                     ERES EL IMPOSTOR
                     <p style="margin-top: 15px; font-weight: normal; font-size: 0.8em; color: inherit;">Los demás tienen una palabra secreta.</p>
                     <p style="font-top: 5px; font-weight: normal; font-size: 0.8em; color: inherit;"><strong>Intenta pasar desapercibido.</strong></p>
 
-                    {# PISTA DE APOYO: VISIBLE AL REVELARSE #}
+                    {# PISTA DE APOYO: AHORA ENVUELTA EN UNA CAPA OCULTA POR DEFECTO #}
                     {% if single_hint %} 
-                    <div class="hint-box" 
+                    <div id="impostor-hint-box" 
+                         class="hint-box hidden" {# <-- INICIA OCULTA #}
                          style="margin-top: 20px; background: rgba(255, 255, 255, 0.8);"> 
                         <strong style="color: #856404;">💡 Pista de apoyo:</strong>
                         <div style="margin-top: 10px;">
@@ -321,8 +359,8 @@ PLAYER_VIEW_TEMPLATE = MAIN_TEMPLATE.replace('{% block content %}{% endblock %}'
             {% else %}
                 <div class="word-display" 
                      id="secret-info-display"
-                     data-hidden-color="white"      {# Oculto: Color blanco (igual al fondo) #}
-                     data-revealed-color="#667eea"  {# Revelado: Color azul (sobre fondo blanco) #}
+                     data-hidden-color="white"       {# Oculto: Color blanco (igual al fondo) #}
+                     data-revealed-color="#667eea"   {# Revelado: Color azul (sobre fondo blanco) #}
                      onmousedown="revealInfo(true, false)" 
                      onmouseup="revealInfo(false, false)" 
                      ontouchstart="revealInfo(true, false)" 
@@ -351,7 +389,7 @@ PLAYER_VIEW_TEMPLATE = MAIN_TEMPLATE.replace('{% block content %}{% endblock %}'
 )
 
 
-# Template de Juego Completo
+# Template de Juego Completo (SIN CAMBIOS)
 GAME_COMPLETE_TEMPLATE = MAIN_TEMPLATE.replace('{% block content %}{% endblock %}', '''
         <script>
             // Función para mostrar la información del impostor y ocultar el botón
@@ -452,6 +490,9 @@ def setup():
             # Seleccionar impostores aleatoriamente (índices basados en 0)
             impostor_indices = random.sample(range(0, num_players), num_impostors)
             
+            # Inicializar el diccionario de colores
+            session['player_colors'] = {} 
+            
             # Guardar en sesión
             session['player_names'] = player_names
             session['num_players'] = num_players
@@ -487,6 +528,18 @@ def show_player():
     current_player_name = player_names[current_index]
     current_player_number = current_index + 1
     
+    # LÓGICA DE COLOR ALEATORIO POR JUGADOR
+    player_colors = session.get('player_colors', {})
+    
+    # Asignar un color si el jugador aún no tiene uno (usando la función de color BRILLANTE)
+    if current_player_name not in player_colors:
+        player_colors[current_player_name] = generate_random_pastel_color()
+        session['player_colors'] = player_colors # Guardar el diccionario actualizado
+    
+    # Crear el estilo CSS en línea para la tarjeta (color sólido)
+    color = player_colors[current_player_name]
+    player_card_style = f"background: {color};" 
+    
     # Comprobar si es impostor (usando el índice base 0)
     is_impostor = current_index in session.get('impostor_indices', [])
     hints_enabled = session.get('hints_enabled', False)
@@ -504,7 +557,8 @@ def show_player():
                                  palabra=session.get('palabra', ''),
                                  categoria=session.get('categoria', ''),
                                  single_hint=single_hint, 
-                                 is_impostor=is_impostor)
+                                 is_impostor=is_impostor,
+                                 player_card_style=player_card_style) # <-- PASAR EL ESTILO
 
 @app.route('/next', methods=['POST'])
 def next_player():
@@ -526,14 +580,14 @@ def game_complete():
         player_names[i] for i in impostor_indices if i < len(player_names)
     ]
     
-    # --- CAMBIO AQUÍ: OBTENER LA PALABRA SECRETA ---
+    # Obtener la palabra secreta
     palabra_secreta = session.get('palabra', 'N/A')
 
     return render_template_string(GAME_COMPLETE_TEMPLATE,
                                  total_players=session.get('num_players', 0),
                                  num_impostors=session.get('num_impostors', 1),
                                  categoria=session.get('categoria', 'N/A'),
-                                 palabra=palabra_secreta, # <-- PASAR LA PALABRA
+                                 palabra=palabra_secreta, 
                                  impostor_names=", ".join(impostor_names))
 
 @app.route('/reset', methods=['POST'])
