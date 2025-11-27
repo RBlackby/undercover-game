@@ -1,0 +1,125 @@
+{
+    "categoria": "Emociones y Sentimientos (Solo Sentimientos)",
+    "palabras": [
+        {
+            "palabra": "Alegría",
+            "pistas": ["Gozo", "Amor", "Paz"]
+        },
+        {
+            "palabra": "Tristeza",
+            "pistas": ["Pena", "Dolor", "Angustia"]
+        },
+        {
+            "palabra": "Enojo",
+            "pistas": ["Ira", "Rabia", "Furia"]
+        },
+        {
+            "palabra": "Miedo",
+            "pistas": ["Temor", "Susto", "Pánico"]
+        },
+        {
+            "palabra": "Amor",
+            "pistas": ["Afecto", "Cariño", "Felicidad"]
+        },
+        {
+            "palabra": "Sorpresa",
+            "pistas": ["Asombro", "Impacto", "Interés"]
+        },
+        {
+            "palabra": "Paz",
+            "pistas": ["Calma", "Alivio", "Serenidad"]
+        },
+        {
+            "palabra": "Ansiedad",
+            "pistas": ["Estrés", "Temor", "Inquietud"]
+        },
+        {
+            "palabra": "Vergüenza",
+            "pistas": ["Culpa", "Dolor", "Pena"]
+        },
+        {
+            "palabra": "Gratitud",
+            "pistas": ["Aprecio", "Gozo", "Felicidad"]
+        },
+        {
+            "palabra": "Esperanza",
+            "pistas": ["Fe", "Deseo", "Optimismo"]
+        },
+        {
+            "palabra": "Aburrimiento",
+            "pistas": ["Tedio", "Desgano", "Apatía"]
+        },
+        {
+            "palabra": "Celos",
+            "pistas": ["Envidia", "Miedo", "Rabia"]
+        },
+        {
+            "palabra": "Confianza",
+            "pistas": ["Seguridad", "Calma", "Valor"]
+        },
+        {
+            "palabra": "Frustración",
+            "pistas": ["Enojo", "Dolor", "Rabia"]
+        },
+        {
+            "palabra": "Orgullo",
+            "pistas": ["Vanidad", "Fuerza", "Dignidad"]
+        },
+        {
+            "palabra": "Compasión",
+            "pistas": ["Cariño", "Pena", "Amor"]
+        },
+        {
+            "palabra": "Nostalgia",
+            "pistas": ["Melancolía", "Tristeza", "Recuerdo"]
+        },
+        {
+            "palabra": "Alivio",
+            "pistas": ["Paz", "Calma", "Descanso"]
+        },
+        {
+            "palabra": "Duda",
+            "pistas": ["Temor", "Inseguridad", "Ansiedad"]
+        },
+        {
+            "palabra": "Euforia",
+            "pistas": ["Alegría", "Excitar", "Gozo"]
+        },
+        {
+            "palabra": "Soledad",
+            "pistas": ["Vacío", "Pena", "Tristeza"]
+        },
+        {
+            "palabra": "Interés",
+            "pistas": ["Atención", "Deseo", "Curiosidad"]
+        },
+        {
+            "palabra": "Aversión",
+            "pistas": ["Asco", "Rechazo", "Desagrado"]
+        },
+        {
+            "palabra": "Determinación",
+            "pistas": ["Fuerza", "Valor", "Decidir"]
+        },
+        {
+            "palabra": "Culpa",
+            "pistas": ["Pena", "Remordimiento", "Dolor"]
+        },
+        {
+            "palabra": "Admiración",
+            "pistas": ["Respeto", "Asombro", "Aprecio"]
+        },
+        {
+            "palabra": "Solidaridad",
+            "pistas": ["Amor", "Unión", "Cariño"]
+        },
+        {
+            "palabra": "Entusiasmo",
+            "pistas": ["Gozo", "Alegría", "Fuerza"]
+        },
+        {
+            "palabra": "Indiferencia",
+            "pistas": ["Apatía", "Desinterés", "Calma"]
+        }
+    ]
+}

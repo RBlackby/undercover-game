@@ -1,0 +1,125 @@
+{
+    "categoria": "Transporte y Vehículos",
+    "palabras": [
+        {
+            "palabra": "Coche",
+            "pistas": ["Tráfico matutino", "Viajes por carretera", "Cuatro ruedas de goma"]
+        },
+        {
+            "palabra": "Avión",
+            "pistas": ["Turbinas ruidosas", "Ver las nubes", "Comida en bandeja"]
+        },
+        {
+            "palabra": "Tren",
+            "pistas": ["Golpeteo en el metal", "Vistas panorámicas", "Largas distancias nocturnas"]
+        },
+        {
+            "palabra": "Barco",
+            "pistas": ["El horizonte se curva", "Vientos marinos", "Balanceo constante"]
+        },
+        {
+            "palabra": "Bicicleta",
+            "pistas": ["El esfuerzo de las piernas", "Casco ligero", "Silencio matinal"]
+        },
+        {
+            "palabra": "Motocicleta",
+            "pistas": ["El viento en la cara", "Curvas rápidas", "Chaqueta de cuero"]
+        },
+        {
+            "palabra": "Submarino",
+            "pistas": ["Presión en las profundidades", "Ventana redonda", "Mundo silencioso"]
+        },
+        {
+            "palabra": "Cohete",
+            "pistas": ["Cuenta regresiva", "Gravedad cero", "Estallido de fuego"]
+        },
+        {
+            "palabra": "Camión",
+            "pistas": ["Espejos gigantes", "Peajes constantes", "El rey de la carga"]
+        },
+        {
+            "palabra": "Ambulancia",
+            "pistas": ["Sonido de urgencia", "Luces rojas", "Llegar rápido a un lugar"]
+        },
+        {
+            "palabra": "Teleférico",
+            "pistas": ["Cables de acero", "Vista de pájaro", "Ascenso lento"]
+        },
+        {
+            "palabra": "Taxi",
+            "pistas": ["Luz encendida", "Destino conocido", "Conversación breve"]
+        },
+        {
+            "palabra": "Autobús",
+            "pistas": ["Leer en movimiento", "Timbre para bajar", "Tarjeta de pago"]
+        },
+        {
+            "palabra": "Tranvía",
+            "pistas": ["Recorrido fijo en ciudad", "Rieles en la calle", "Movimiento suave"]
+        },
+        {
+            "palabra": "Globo aerostático",
+            "pistas": ["Fuego controlado", "Canasta de mimbre", "Viaje con el viento"]
+        },
+        {
+            "palabra": "Ferry",
+            "pistas": ["Puente sobre el agua", "Rutas cortas", "Mover coches"]
+        },
+        {
+            "palabra": "Yate",
+            "pistas": ["Lujo discreto", "Velas blancas", "Puertos exclusivos"]
+        },
+        {
+            "palabra": "Tractor",
+            "pistas": ["Campos de cultivo", "Neumáticos macizos", "Ruido lento"]
+        },
+        {
+            "palabra": "Monopatín",
+            "pistas": ["Equilibrio juvenil", "Trucos y giros", "Movimiento callejero"]
+        },
+        {
+            "palabra": "Metrobús",
+            "pistas": ["Carril exclusivo", "Articulado", "Grandes ciudades"]
+        },
+        {
+            "palabra": "Montacargas",
+            "pistas": ["Almacén grande", "Paletas de madera", "Movimiento vertical"]
+        },
+        {
+            "palabra": "Carruaje",
+            "pistas": ["Sonido de herraduras", "Época pasada", "Tracción animal"]
+        },
+        {
+            "palabra": "Moto de nieve",
+            "pistas": ["Frío extremo", "Pistas blancas", "Manillar calentado"]
+        },
+        {
+            "palabra": "Todoterreno",
+            "pistas": ["Barro y piedras", "Tracción en las cuatro ruedas", "Aventura"]
+        },
+        {
+            "palabra": "Patineta eléctrica",
+            "pistas": ["Batería recargable", "Casco obligatorio", "Paseo ágil"]
+        },
+        {
+            "palabra": "Chiva (Autobús rural)",
+            "pistas": ["Colores brillantes", "Techo lleno de cosas", "Rutas de montaña"]
+        },
+        {
+            "palabra": "Velero",
+            "pistas": ["Fuerza del viento", "Nudos marineros", "Casco estrecho"]
+        },
+        {
+            "palabra": "Carretilla",
+            "pistas": ["Obra de construcción", "Una rueda", "Mover arena"]
+        },
+        {
+            "palabra": "Globo dirigible",
+            "pistas": ["Forma de cigarro", "Publicidad aérea", "Gas ligero"]
+        },
+        {
+            "palabra": "Triciclo",
+            "pistas": ["Primera infancia", "Pedales pequeños", "Mucha estabilidad"]
+        }
+    ]
+}

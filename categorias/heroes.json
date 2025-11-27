@@ -1,0 +1,141 @@
+{
+    "categoria": "Personajes de Cómics (Detallado)",
+    "palabras": [
+        {
+            "palabra": "Joker",
+            "pistas": ["Risa estridente", "Flor venenosa", "Enemigo del orden", "Baraja de cartas", "Asesino sonriente"]
+        },
+        {
+            "palabra": "Thanos",
+            "pistas": ["Hijo de Titán", "El chasquido", "Guantelete dorado", "Buscar el equilibrio", "Gemología mortal"]
+        },
+        {
+            "palabra": "Superman",
+            "pistas": ["Diario de Metrópolis", "Granja de Kansas", "Traje escarlata y azul", "Sol amarillo", "Debilidad verde"]
+        },
+        {
+            "palabra": "Batman",
+            "pistas": ["Trauma infantil", "Cueva secreta", "Vehículo negro alado", "Rico y huérfano", "Miedo superado"]
+        },
+        {
+            "palabra": "Mujer Maravilla",
+            "pistas": ["Princesa Diana", "Lazo dorado", "Avión invisible", "Origen mitológico", "Tierra de Amazonas"]
+        },
+        {
+            "palabra": "Spider-Man",
+            "pistas": ["Sentido de alerta", "Balanceo urbano", "Tía May", "Responsabilidad inmensa", "Tejedor elástico"]
+        },
+        {
+            "palabra": "Capitán América",
+            "pistas": ["Escudo circular", "Suero de supersoldado", "Congelado en hielo", "Liderazgo moral", "Amigo Bucky"]
+        },
+        {
+            "palabra": "Iron Man",
+            "pistas": ["Genio inventor", "Reactor en el pecho", "Chaqueta roja y dorada", "Problemas de alcoholismo", "Un millón de dólares"]
+        },
+        {
+            "palabra": "Hulk",
+            "pistas": ["Incontrolable", "Radiación Gamma", "Doctor Banner", "Destrucción masiva", "Ropa rasgada"]
+        },
+        {
+            "palabra": "Flash",
+            "pistas": ["Fuerza de la velocidad", "Rayos amarillos", "Crimen sin resolver", "Policía forense", "Vibrar paredes"]
+        },
+        {
+            "palabra": "Lex Luthor",
+            "pistas": ["Calvicie malvada", "Genio científico", "Presidente de EE. UU.", "Odio a los aliens", "Corporación malvada"]
+        },
+        {
+            "palabra": "Wonder Man",
+            "pistas": ["Energía iónica", "Actor de Hollywood", "Traje rojo y verde", "Hermano villano", "Resurrección frecuente"]
+        },
+        {
+            "palabra": "Daredevil",
+            "pistas": ["Abogado nocturno", "Sentidos agudizados", "Barrio Hell's Kitchen", "Bastón plegable", "Accidente químico"]
+        },
+        {
+            "palabra": "Mística",
+            "pistas": ["Piel azul", "Forma cambiante", "Madre adoptiva", "Luchadora por mutantes", "Maestra del engaño"]
+        },
+        {
+            "palabra": "Shazam",
+            "pistas": ["Palabra mágica", "Mortal juvenil", "Rayo brillante", "Sabiduría antigua", "Seis deidades"]
+        },
+        {
+            "palabra": "Loki",
+            "pistas": ["Dios de la travesura", "Hermano adoptivo", "Astuto y engañoso", "Cuernos dorados", "Magia nórdica"]
+        },
+        {
+            "palabra": "Black Panther",
+            "pistas": ["Monarca africano", "Metal alienígena", "Tribus ancestrales", "Garras retráctiles", "Traje vibranium"]
+        },
+        {
+            "palabra": "Doctor Octopus",
+            "pistas": ["Brazos mecánicos", "Científico loco", "Arreglo craneal", "Gafas gruesas", "Enemigo de Spider"]
+        },
+        {
+            "palabra": "Wolverine",
+            "pistas": ["Garras de Adamantium", "Factor de curación", "Soldado atormentado", "Esqueleto de metal", "Furia canadiense"]
+        },
+        {
+            "palabra": "Harley Quinn",
+            "pistas": ["Psiquiatra convertida", "Mazo gigante", "Disfraz de bufón", "Novia del payaso", "Locura colorida"]
+        },
+        {
+            "palabra": "Cíclope",
+            "pistas": ["Rayo óptico", "Visor de rubí", "Líder de X-Men", "Hermano volcánico", "Controla la energía"]
+        },
+        {
+            "palabra": "Visión",
+            "pistas": ["Sintezoide", "Gema en la frente", "Puede flotar", "Creado por un robot", "Cambia de densidad"]
+        },
+        {
+            "palabra": "Venom",
+            "pistas": ["Boca dentada", "Periodista anfitrión", "Lengua larga", "Color oscuro", "Codependencia extraterrestre"]
+        },
+        {
+            "palabra": "Doctor Strange",
+            "pistas": ["Ojo de Agamotto", "Maestro de las artes", "Accidente de manos", "Hechizos visuales", "Dimensión oscura"]
+        },
+        {
+            "palabra": "Deathstroke",
+            "pistas": ["Mercenario experto", "Cyborg enmascarado", "Contratos letales", "Espadas y pistolas", "Factor de curación"]
+        },
+        {
+            "palabra": "Green Arrow",
+            "pistas": ["Arco y flecha", "Multimillonario perdido", "Justicia urbana", "Trucos ingeniosos", "La isla Lian Yu"]
+        },
+        {
+            "palabra": "Gambito",
+            "pistas": ["Cartas explosivas", "Cajun encantador", "Bastón de lucha", "Ladrón reformado", "Energía cinética"]
+        },
+        {
+            "palabra": "Magneto",
+            "pistas": ["Control de metales", "Campos de fuerza", "Líder de mutantes", "Pasado trágico", "El casco plateado"]
+        },
+        {
+            "palabra": "Deadpool",
+            "pistas": ["Rompe la cuarta pared", "Regeneración veloz", "Tacos favoritos", "Doble katana", "Uniforme rojo y negro"]
+        },
+        {
+            "palabra": "La Viuda Negra",
+            "pistas": ["Espía maestra", "Baile rojo", "Poder femenino", "Látigos eléctricos", "Agente SHIELD"]
+        },
+        {
+            "palabra": "Duende Verde",
+            "pistas": ["Bomba calabaza", "Planeador volador", "Máscara rígida", "Empresario psicópata", "Risa alta"]
+        },
+        {
+            "palabra": "Rocket Raccoon",
+            "pistas": ["Gatling gun", "Mapache parlante", "Guardiana de la Galaxia", "Experimento genético", "Piloto experto"]
+        },
+        {
+            "palabra": "Bruja Escarlata",
+            "pistas": ["Magia de caos", "Hermana de Quicksilver", "Poder mental", "Traje escarlata", "Alterar la realidad"]
+        },
+        {
+            "palabra": "Fénix Oscura",
+            "pistas": ["Entidad cósmica", "Llamas espaciales", "Saga épica", "Sacrificio de amor", "Poder inmenso"]
+        }
+    ]
+}
