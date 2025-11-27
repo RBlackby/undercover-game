@@ -390,6 +390,7 @@ PLAYER_VIEW_TEMPLATE = MAIN_TEMPLATE.replace('{% block content %}{% endblock %}'
 
 
 # Template de Juego Completo (SIN CAMBIOS)
+# Template de Juego Completo (MODIFICADO para Diseño Moderno)
 GAME_COMPLETE_TEMPLATE = MAIN_TEMPLATE.replace('{% block content %}{% endblock %}', '''
         <script>
             // Función para mostrar la información del impostor y ocultar el botón
@@ -398,55 +399,133 @@ GAME_COMPLETE_TEMPLATE = MAIN_TEMPLATE.replace('{% block content %}{% endblock %
                 const btn = document.getElementById('mostrar-btn');
                 
                 if (infoDiv) {
-                    infoDiv.style.display = 'block'; // Muestra la información
+                    infoDiv.style.maxHeight = infoDiv.scrollHeight + "px"; // Revela con animación
+                    infoDiv.style.opacity = '1';
                 }
                 if (btn) {
                     btn.style.display = 'none'; // Oculta el botón después de presionar
                 }
             }
         </script>
+        <style>
+            /* Estilo para las tarjetas de resultado */
+            .result-card {
+                background: #f7f9fc;
+                padding: 25px;
+                border-radius: 12px;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+                margin-bottom: 20px;
+                text-align: center;
+                border-left: 5px solid #667eea; /* Color primario */
+            }
+            .result-card h3 {
+                color: #764ba2;
+                margin-bottom: 15px;
+                font-size: 1.6em;
+            }
+            .result-card strong {
+                font-weight: 700;
+                color: #333;
+            }
+            /* Estilo específico para la información secreta (Impostor/Palabra) */
+            #impostor-info {
+                background: #ffe3e3; /* Fondo más suave para la revelación */
+                border-left-color: #ff6b6b; /* Rojo para Impostor */
+                transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out; 
+                max-height: 0; /* Inicia oculto */
+                opacity: 0;
+                overflow: hidden;
+            }
+            #impostor-info h3 {
+                color: #ff6b6b; /* Título rojo */
+            }
+            .word-of-the-game {
+                font-size: 2.5em;
+                font-weight: bold;
+                color: #667eea;
+                margin-top: 10px;
+                display: block;
+                padding: 10px;
+                border-radius: 8px;
+                background: #e9ecef;
+            }
+            .player-list {
+                font-size: 1.2em;
+                margin-top: 10px;
+                line-height: 1.6;
+            }
+            .start-player-info {
+                background: #d1ecf1;
+                border: 1px solid #bee5eb;
+                color: #0c5460;
+                padding: 15px;
+                border-radius: 10px;
+                font-size: 1.2em;
+                font-weight: 600;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+            .start-player-info span {
+                color: #764ba2;
+                font-size: 1.4em;
+                font-weight: bold;
+                display: block;
+                margin-top: 5px;
+            }
+        </style>
 
-        <h1>✅ ¡Información del Juego!</h1>
+        <h1>🎉 ¡A jugar!</h1>
         
-        <div class="info">
-            <h2>Datos Generales</h2>
+        <div class="result-card">
             <p><strong>Total de jugadores:</strong> {{ total_players }}</p>
-            <br/>
-            <p style="font-size: 1.5em; font-weight: bold; color: #53269E; text-align: left;"><strong>Inicia:</strong></p>
-            <p style="font-size: 1.5em; font-weight: bold; color: #53269E; text-align: center;">
-        {{ jugador_inicial }} 
-    </p>
+            <p><strong>Número de Impostores:</strong> {{ num_impostors }}</p>
         </div>
 
-        {# Botón que se presiona para revelar #}
-        <button id="mostrar-btn" onclick="mostrarImpostores()" style="margin-top: 20px;">
-            Mostrar Impostor{{ "es" if num_impostors > 1 else "" }}
+        {# Información del jugador inicial destacada #}
+        <div class="start-player-info">
+            Inicia el juego: 
+            <span>{{ jugador_inicial }}</span>
+        </div>
+
+        {# Botón para revelar la información secreta #}
+        <button id="mostrar-btn" onclick="mostrarImpostores()" style="margin-top: 10px; margin-bottom: 20px;">
+            Mostrar Impostor{{ "es" if num_impostors > 1 else "" }} y Palabra Secreta
         </button>
 
-        {# La información del impostor: OCULTA POR DEFECTO #}
-        <div id="impostor-info" 
-             class="impostor-display-final" 
-             style="background: #ff6b6b; display: none; margin-top: 20px; padding: 20px; border-radius: 10px;"> 
+        {# La información secreta del juego: OCULTA POR DEFECTO #}
+        <div id="impostor-info" class="result-card"> 
             
-            <h3>🎭 Impostor{{ "es" if num_impostors > 1 else "" }} ({{ num_impostors }})</h3>
-            <p style="font-size: 1.2em; margin-top: 10px;">{{ impostor_names }}</p>
-            <br/>
-            <p><strong>Categoría:</strong> {{ categoria }}</p>
-            <p><strong>PALABRA:</strong> {{ palabra }} </p>
+            <h3>Terminó el juego</h3>
+
+            {# Impostor(es) #}
+            <h4>🎭 Impostor{{ "es" if num_impostors > 1 else "" }}</h4>
+            <div class="player-list">
+                {{ impostor_names }}
+            </div>
+            
+            <hr style="margin: 20px 0; border: 0; border-top: 1px solid #ccc;"/>
+
+            {# Palabra Secreta #}
+            <h4>⭐ Palabra</h4>
+            <span class="word-of-the-game">
+                {{ palabra }} 
+            </span>
+
         </div>
         
+        {# Sección de Reglas - Mantiene el estilo "warning" #}
         <div class="warning" style="margin-top: 20px;">
             <h3>📜 Reglas Rápidas:</h3>
             <ul style="margin-left: 20px; margin-top: 10px;">
                 <li>Discutan quién creen que es el impostor.</li>
-                <li>Si la mayoría vota correctamente, ganan los civiles.</li>
-                <li>Si votan al civil o no identifican al impostor, gana el impostor.</li>
+                <li>Si la mayoría vota correctamente al impostor, ganan los civiles.</li>
+                <li>Si votan a un civil o no logran identificar al impostor, gana el impostor.</li>
             </ul>
         </div>
         
         <form method="POST" action="{{ url_for('reset') }}">
-            <button type="submit">Nuevo Juego</button>
-        </form><br/>Royer Blackberry - <a href="https://github.com/RBlackby/undercover-game">Repositorio del Juego Undercover</a> - 2025
+            <button type="submit">🔁 Nuevo Juego</button>
+        </form><br/>Royer Blackberry - <a href="https://github.com/RBlackby/undercover-game" target="_blank">Repositorio del Juego Undercover</a> - 2025
 '''
 )
 
