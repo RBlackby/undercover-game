@@ -549,7 +549,7 @@ GAME_COMPLETE_TEMPLATE = MAIN_TEMPLATE.replace('{% block content %}{% endblock %
             <hr style="margin: 20px 0; border: 0; border-top: 1px solid #ccc;"/>
 
             {# Palabra Secreta #}
-            <h4>⭐ Palabra</h4>
+            <h4>Categoría:</h4>  {{ categoria }}
             <span class="word-of-the-game">
                 {{ palabra }} 
             </span>
