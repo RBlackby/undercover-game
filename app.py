@@ -97,7 +97,7 @@ MAIN_TEMPLATE = '''
         .container {
             background: white;
             border-radius: 20px;
-            padding: 40px;
+            padding: 10px;
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
             max-width: 600px;
             width: 100%;
@@ -170,7 +170,7 @@ MAIN_TEMPLATE = '''
         /* ESTILO DE LA TARJETA DEL JUGADOR - USA COLOR SÓLIDO */
         .player-card {
             background: #667eea; /* Color por defecto, será sobreescrito por inline style */
-            color: white; padding: 30px; border-radius: 15px;
+            color: white; padding: 10px; border-radius: 15px;
             text-align: center; margin-bottom: 20px;
             transition: background 0.5s ease-in-out; 
         }
@@ -355,7 +355,7 @@ PLAYER_VIEW_TEMPLATE = MAIN_TEMPLATE.replace('{% block content %}{% endblock %}'
             }
         </style>
         
-        <h1>🎭 Juego del Impostor</h1>
+        <h1>Juego del Impostor</h1>
         
         {# SE INYECTA EL ESTILO DE COLOR SÓLIDO Y BRILLANTE #}
         <div class="player-card" style="{{ player_card_style }}">
