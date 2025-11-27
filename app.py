@@ -82,7 +82,7 @@ MAIN_TEMPLATE = '''
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juego del Impostor - Royer Blackberry</title>
+    <title>Juego del Underconver - Royer Blackberry</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -411,6 +411,11 @@ GAME_COMPLETE_TEMPLATE = MAIN_TEMPLATE.replace('{% block content %}{% endblock %
         <div class="info">
             <h2>Datos Generales</h2>
             <p><strong>Total de jugadores:</strong> {{ total_players }}</p>
+            <br/>
+            <p style="font-size: 1.5em; font-weight: bold; color: #53269E; text-align: left;"><strong>Inicia:</strong></p>
+            <p style="font-size: 1.5em; font-weight: bold; color: #53269E; text-align: center;">
+        {{ jugador_inicial }} 
+    </p>
         </div>
 
         {# Botón que se presiona para revelar #}
@@ -421,7 +426,7 @@ GAME_COMPLETE_TEMPLATE = MAIN_TEMPLATE.replace('{% block content %}{% endblock %
         {# La información del impostor: OCULTA POR DEFECTO #}
         <div id="impostor-info" 
              class="impostor-display-final" 
-             style="background: #ff6b6b; display: none; margin-top: 20px;"> 
+             style="background: #ff6b6b; display: none; margin-top: 20px; padding: 20px; border-radius: 10px;"> 
             
             <h3>🎭 Impostor{{ "es" if num_impostors > 1 else "" }} ({{ num_impostors }})</h3>
             <p style="font-size: 1.2em; margin-top: 10px;">{{ impostor_names }}</p>
@@ -566,6 +571,8 @@ def next_player():
         session['current_player_index'] += 1
     return redirect(url_for('show_player'))
 
+# ... (código anterior)
+
 @app.route('/complete')
 def game_complete():
     if 'num_players' not in session or 'impostor_indices' not in session:
@@ -583,12 +590,23 @@ def game_complete():
     # Obtener la palabra secreta
     palabra_secreta = session.get('palabra', 'N/A')
 
+    # --- NUEVA LÓGICA: SELECCIONAR JUGADOR INICIAL ALEATORIO ---
+    jugador_inicial = "Nadie (Error)"
+    if player_names:
+        jugador_inicial = random.choice(player_names)
+    # --- FIN NUEVA LÓGICA ---
+
     return render_template_string(GAME_COMPLETE_TEMPLATE,
                                  total_players=session.get('num_players', 0),
                                  num_impostors=session.get('num_impostors', 1),
                                  categoria=session.get('categoria', 'N/A'),
                                  palabra=palabra_secreta, 
-                                 impostor_names=", ".join(impostor_names))
+                                 impostor_names=", ".join(impostor_names),
+                                 # --- PASAR NUEVA VARIABLE ---
+                                 jugador_inicial=jugador_inicial) 
+
+@app.route('/reset', methods=['POST'])
+# ... (código posterior)
 
 @app.route('/reset', methods=['POST'])
 def reset():
