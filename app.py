@@ -110,14 +110,55 @@ MAIN_TEMPLATE = '''
             width: 100%; padding: 12px; border: 2px solid #e0e0e0;
             border-radius: 8px; font-size: 16px; transition: border-color 0.3s;
         }
-        input[type="number"]:focus, input[type="text"]:focus, select[type="focus"] { outline: none; border-color: #667eea; }
+        input[type="number"]:focus, input[type="text"]:focus, select:focus { outline: none; border-color: #667eea; }
+        
+        /* ESTILOS DE CHECKBOX MODERNOS Y GRANDES */
         .checkbox-group {
             background: #f8f9fa; padding: 15px; border-radius: 8px;
-            min-height: 400px; 
+            min-height: 300px; 
+            max-height: 400px; /* Reducido un poco para consistencia */
             overflow-y: auto;
         }
-        .checkbox-item { margin-bottom: 10px; }
-        .checkbox-item input { margin-right: 10px; }
+        .checkbox-item { 
+            margin-bottom: 12px; 
+            display: flex; 
+            align-items: center;
+        }
+        .checkbox-item input[type="checkbox"] { 
+            width: 22px; 
+            height: 22px;
+            min-width: 22px; 
+            margin-right: 15px; 
+            cursor: pointer;
+            border: 2px solid #667eea;
+            appearance: none; 
+            border-radius: 6px; /* Más suave */
+            position: relative;
+        }
+        .checkbox-item input[type="checkbox"]:checked {
+            background-color: #667eea;
+            border-color: #667eea;
+        }
+        .checkbox-item input[type="checkbox"]:checked::before {
+            content: '✓';
+            display: block;
+            color: white;
+            font-size: 18px; /* Tamaño del check */
+            line-height: 1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-weight: bold;
+        }
+        .checkbox-item label { 
+            margin-bottom: 0; 
+            line-height: 1.2;
+            cursor: pointer;
+            font-weight: 400; /* Menos negrita en el texto del elemento */
+        }
+        /* FIN ESTILOS CHECKBOX */
+
         button {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white; border: none; padding: 15px 30px; font-size: 18px;
@@ -186,9 +227,9 @@ MAIN_TEMPLATE = '''
 </html>
 '''
 
-# Template de Configuración (SIN CAMBIOS)
+# Template de Configuración (MODIFICADO para Diseño Moderno)
 SETUP_TEMPLATE = MAIN_TEMPLATE.replace('{% block content %}{% endblock %}', '''
-        <h1>🎭 Juego del Impostor</h1>
+        <h1>🎭 Configuración de Ronda</h1>
         
         {% if error %}
         <div class="warning">
@@ -198,12 +239,13 @@ SETUP_TEMPLATE = MAIN_TEMPLATE.replace('{% block content %}{% endblock %}', '''
         
         <form method="POST" action="{{ url_for('setup') }}">
             <div class="form-group">
-                <label for="player_names">Nombres de jugadores (separados por comas, ej: Ana, Carlos, Diego, Eva):</label>
-                <input type="text" id="player_names" name="player_names" placeholder="Ej: Jugador1, Jugador2, Jugador3" required>
+                <label for="player_names">Nombres de jugadores (Separados por coma):</label>
+                <input type="text" id="player_names" name="player_names" 
+                       placeholder="Ej: Ana, Carlos, Diego, Eva" required>
             </div>
             
             <div class="form-group">
-                <label for="num_impostors">Número de impostores (Basado en el número de nombres ingresados):</label>
+                <label for="num_impostors">Número de impostores:</label>
                 <select id="num_impostors" name="num_impostors">
                     <option value="1">1 impostor</option>
                     <option value="2">2 impostores</option>
@@ -212,13 +254,15 @@ SETUP_TEMPLATE = MAIN_TEMPLATE.replace('{% block content %}{% endblock %}', '''
             </div>
             
             <div class="form-group">
-                <label>Categorías disponibles:</label>
+                <label>🌐 Selecciona las Categorías:</label>
                 {% if categories %}
                 <div class="checkbox-group">
                     {% for cat_name in categories.keys() %}
                     <div class="checkbox-item">
                         <input type="checkbox" id="cat_{{ loop.index }}" name="selected_categories" value="{{ cat_name }}" checked>
-                        <label for="cat_{{ loop.index }}" style="display: inline;">{{ cat_name }} ({{ categories[cat_name].palabras|length }} palabras)</label>
+                        <label for="cat_{{ loop.index }}" style="display: inline;">
+                            {{ cat_name }} ({{ categories[cat_name].palabras|length }} palabras)
+                        </label>
                     </div>
                     {% endfor %}
                 </div>
@@ -229,17 +273,16 @@ SETUP_TEMPLATE = MAIN_TEMPLATE.replace('{% block content %}{% endblock %}', '''
                 {% endif %}
             </div>
             
-            
             <div class="form-group">
+                <label>Opciones Adicionales:</label>
                 <div class="checkbox-item">
                     <input type="checkbox" id="hints_enabled" name="hints_enabled" checked>
                     <label for="hints_enabled" style="display: inline;">Activar pistas (Solo visibles para el impostor)</label>
                 </div>
             </div>
             
-            <button type="submit">Iniciar Juego</button>
-        </form><br/>Royer Blackberry - <a href="https://github.com/RBlackby/undercover-game">Repositorio del Juego Undercover</a> - 2025
-
+            <button type="submit">🚀 Iniciar Juego</button>
+        </form><br/>Royer Blackberry - <a href="https://github.com/RBlackby/undercover-game" target="_blank">Repositorio del Juego Undercover</a> - 2025
 '''
 )
 
