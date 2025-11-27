@@ -426,7 +426,7 @@ GAME_COMPLETE_TEMPLATE = MAIN_TEMPLATE.replace('{% block content %}{% endblock %
         {# La información del impostor: OCULTA POR DEFECTO #}
         <div id="impostor-info" 
              class="impostor-display-final" 
-             style="background: #ff6b6b; display: none; margin-top: 20px;"> 
+             style="background: #ff6b6b; display: none; margin-top: 20px; padding: 20px; border-radius: 10px;"> 
             
             <h3>🎭 Impostor{{ "es" if num_impostors > 1 else "" }} ({{ num_impostors }})</h3>
             <p style="font-size: 1.2em; margin-top: 10px;">{{ impostor_names }}</p>
