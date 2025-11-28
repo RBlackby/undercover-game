@@ -432,26 +432,96 @@ PLAYER_VIEW_TEMPLATE = MAIN_TEMPLATE.replace('{% block content %}{% endblock %}'
 )
 
 
-# Template de Juego Completo (SIN CAMBIOS)
 # Template de Juego Completo (MODIFICADO para Diseño Moderno)
 GAME_COMPLETE_TEMPLATE = MAIN_TEMPLATE.replace('{% block content %}{% endblock %}', '''
-        <script>
-            // Función para mostrar la información del impostor y ocultar el botón
-            function mostrarImpostores() {
-                const infoDiv = document.getElementById('impostor-info');
-                const btn = document.getElementById('mostrar-btn');
-                
-                if (infoDiv) {
-                    infoDiv.style.maxHeight = infoDiv.scrollHeight + "px"; // Revela con animación
-                    infoDiv.style.opacity = '1';
-                }
-                if (btn) {
-                    btn.style.display = 'none'; // Oculta el botón después de presionar
+    <script>
+        // 1. Variable global para almacenar el ID del intervalo del temporizador
+        let countdownInterval;
+
+        // Función para mostrar la información del impostor y ocultar el botón
+        function mostrarImpostores() {
+            // DETENER EL TEMPORIZADOR AQUI
+            if (countdownInterval) {
+                clearInterval(countdownInterval);
+                const display = document.getElementById('countdown');
+                // Si el tiempo no había terminado, muestra un mensaje de detención
+                if (display && display.textContent.includes(":")) { 
+                    display.textContent = "00:00 - ¡DETENIDO!";
                 }
             }
-        </script>
-        <style>
-            /* Estilo para las tarjetas de resultado */
+
+            const infoDiv = document.getElementById('impostor-info');
+            const btn = document.getElementById('mostrar-btn');
+            
+            if (infoDiv) {
+                // Se usa scrollHeight para la animación de revelación
+                infoDiv.style.maxHeight = infoDiv.scrollHeight + "px"; 
+                infoDiv.style.opacity = '1';
+            }
+            if (btn) {
+                btn.style.display = 'none'; // Oculta el botón después de presionar
+            }
+        }
+        
+        // FUNCIÓN DE CUENTA REGRESIVA
+        function iniciarCuentaRegresiva(duracion, display) {
+            let timer = duracion, minutos, segundos;
+            
+            // 2. Almacenar el intervalo en la variable global
+            countdownInterval = setInterval(function () { 
+                minutos = parseInt(timer / 60, 10);
+                segundos = parseInt(timer % 60, 10);
+
+                minutos = minutos < 10 ? "0" + minutos : minutos;
+                segundos = segundos < 10 ? "0" + segundos : segundos;
+
+                display.textContent = minutos + ":" + segundos;
+
+                if (--timer < 0) {
+                    clearInterval(countdownInterval); // Limpia la variable global al terminar
+                    display.textContent = "¡Tiempo terminado!";
+                    // Opcional: habilitar el botón de 'Mostrar Impostores' si estaba deshabilitado
+                }
+            }, 1000);
+        }
+
+        // --- PUNTO CLAVE: UNIFICAR LA INICIALIZACIÓN ---
+        document.addEventListener('DOMContentLoaded', function() {
+            // Inicializar la cuenta regresiva de 3 minutos (180 segundos)
+            const tresMinutos = 60 * 3;
+            const display = document.getElementById('countdown');
+            if (display) {
+                iniciarCuentaRegresiva(tresMinutos, display);
+            }
+        });
+    </script>
+    <style>
+    
+
+        /* --- ESTILO DE TEMPORIZADOR AÑADIDO/AJUSTADO --- */
+        #countdown-container {
+            text-align: center;
+            margin: 30px auto;
+            padding: 20px;
+            border-radius: 15px;
+            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+            color: white;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+        #countdown-container h3 {
+            color: #ffe3e3;
+            margin-bottom: 10px;
+            font-size: 1.8em;
+        }
+        #countdown {
+            font-size: 4em;
+            font-weight: 900;
+            letter-spacing: 3px;
+            display: block;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        /* -------------------------------------- */
+       /* Estilo para las tarjetas de resultado */
             .result-card {
                 background: #f7f9fc;
                 padding: 25px;
@@ -515,27 +585,34 @@ GAME_COMPLETE_TEMPLATE = MAIN_TEMPLATE.replace('{% block content %}{% endblock %
                 display: block;
                 margin-top: 5px;
             }
-        </style>
+    </style>
 
-        <h1>🎉 ¡A jugar!</h1>
-        
-        <div class="result-card">
-            <p><strong>Total de jugadores:</strong> {{ total_players }}</p>
-            <p><strong>Número de Impostores:</strong> {{ num_impostors }}</p>
-        </div>
+    <h1>🎉 ¡A jugar!</h1>
 
-        {# Información del jugador inicial destacada #}
-        <div class="start-player-info">
-            Inicia el juego: 
-            <span>{{ jugador_inicial }}</span>
-        </div>
+    {# --- CONTENEDOR DEL TEMPORIZADOR --- #}
+    <div id="countdown-container">
+        <h3>Tiempo de Discusión</h3>
+        <span id="countdown">03:00</span>
+    </div>
+    {# ------------------------------------ #}
+    
+    <div class="result-card">
+        <p><strong>Total de jugadores:</strong> {{ total_players }}</p>
+        <p><strong>Número de Impostores:</strong> {{ num_impostors }}</p>
+    </div>
 
-        {# Botón para revelar la información secreta #}
-        <button id="mostrar-btn" onclick="mostrarImpostores()" style="margin-top: 10px; margin-bottom: 20px;">
-            Mostrar Impostor{{ "es" if num_impostors > 1 else "" }} y Palabra Secreta
-        </button>
+    {# Información del jugador inicial destacada #}
+    <div class="start-player-info">
+        Inicia el juego: 
+        <span>{{ jugador_inicial }}</span>
+    </div>
 
-        {# La información secreta del juego: OCULTA POR DEFECTO #}
+    {# Botón para revelar la información secreta #}
+    <button id="mostrar-btn" onclick="mostrarImpostores()" style="margin-top: 10px; margin-bottom: 20px;">
+        Mostrar Impostor{{ "es" if num_impostors > 1 else "" }} y Palabra Secreta
+    </button>
+
+   {# La información secreta del juego: OCULTA POR DEFECTO #}
         <div id="impostor-info" class="result-card"> 
             
             <h3>Terminó el juego</h3>
@@ -555,20 +632,20 @@ GAME_COMPLETE_TEMPLATE = MAIN_TEMPLATE.replace('{% block content %}{% endblock %
             </span>
 
         </div>
-        
-        {# Sección de Reglas - Mantiene el estilo "warning" #}
-        <div class="warning" style="margin-top: 20px;">
-            <h3>📜 Reglas Rápidas:</h3>
-            <ul style="margin-left: 20px; margin-top: 10px;">
-                <li>Discutan quién creen que es el impostor.</li>
-                <li>Si la mayoría vota correctamente al impostor, ganan los civiles.</li>
-                <li>Si votan a un civil o no logran identificar al impostor, gana el impostor.</li>
-            </ul>
-        </div>
-        
-        <form method="POST" action="{{ url_for('reset') }}">
-            <button type="submit">🔁 Nuevo Juego</button>
-        </form><br/>Royer Blackberry - <a href="https://github.com/RBlackby/undercover-game" target="_blank">Repositorio del Juego Undercover</a> - 2025
+    
+    {# Sección de Reglas - Mantiene el estilo "warning" #}
+    <div class="warning" style="margin-top: 20px;">
+        <h3>📜 Reglas Rápidas:</h3>
+        <ul style="margin-left: 20px; margin-top: 10px;">
+            <li>Discutan quién creen que es el impostor.</li>
+            <li>Si la mayoría vota correctamente al impostor, ganan los civiles.</li>
+            <li>Si votan a un civil o no logran identificar al impostor, gana el impostor.</li>
+        </ul>
+    </div>
+    
+    <form method="POST" action="{{ url_for('reset') }}">
+        <button type="submit">🔁 Nuevo Juego</button>
+    </form><br/>Royer Blackberry - <a href="https://github.com/RBlackby/undercover-game" target="_blank">Repositorio del Juego Undercover</a> - 2025
 '''
 )
 
