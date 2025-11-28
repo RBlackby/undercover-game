@@ -511,15 +511,15 @@ GAME_COMPLETE_TEMPLATE = MAIN_TEMPLATE.replace('{% block content %}{% endblock %
         #countdown-container h3 {
             color: #ffe3e3;
             margin-bottom: 10px;
-            font-size: 1.8em;
+            font-size: 0.8em;
         }
         #countdown {
-            font-size: 4em;
-            font-weight: 900;
-            letter-spacing: 3px;
-            display: block;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
+    font-size: 2em;
+    font-weight: 900;
+    letter-spacing: 0px;
+    display: block;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
         /* -------------------------------------- */
        /* Estilo para las tarjetas de resultado */
             .result-card {
